@@ -1,0 +1,223 @@
+/* Import Google Fonts for bold headings */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #23160f;
+}
+
+.header {
+    background: #2c180f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    height: 56px;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Russo One', Arial, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-right: 24px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.nav a:hover {
+    opacity: 1;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.icon-menu, .icon-bell, .icon-user {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.icon-menu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 7px; top: 11px;
+    width: 14px; height: 2px;
+    background: #2c180f;
+    box-shadow: 0 5px 0 #2c180f, 0 10px 0 #2c180f;
+}
+.icon-bell::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 9px; top: 8px;
+    width: 10px; height: 10px;
+    border-radius: 50% 50% 40% 40%;
+    background: #f9c22e;
+}
+.icon-user::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 7px; top: 7px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: #f9c22e;
+    border: 2px solid #2c180f;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background: #fff;
+    min-height: 260px;
+}
+.hero-img {
+    width: 40%;
+    object-fit: cover;
+    min-height: 260px;
+}
+.hero-info {
+    width: 60%;
+    padding: 32px 32px 0 32px;
+    background: #f9f6f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-info h1 {
+    font-family: 'Russo One', Arial, sans-serif;
+    font-size: 2rem;
+    color: #23160f;
+    margin-bottom: 16px;
+}
+.hero-info p {
+    font-size: 1rem;
+    color: #23160f;
+    margin: 0;
+}
+
+.leia-mais {
+    margin-top: 0;
+}
+.leia-mais-banner {
+    background: linear-gradient(90deg, #f9c22e 60%, #ffdb7c 100%);
+    text-align: center;
+    padding: 18px 0;
+}
+.leia-mais-banner h2 {
+    font-family: 'Russo One', Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #23160f;
+    margin: 0;
+    letter-spacing: 2px;
+}
+.leia-mais-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #fff;
+    padding: 32px 32px 32px 32px;
+}
+.leia-mais-text {
+    flex: 2;
+    font-size: 1.2rem;
+    color: #23160f;
+    line-height: 1.7;
+    margin-right: 24px;
+}
+.leia-mais-img {
+    flex: 1;
+    max-width: 180px;
+    height: auto;
+    align-self: flex-end;
+}
+
+.footer {
+    background: #2c180f;
+    color: #fff;
+    padding: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.footer-section {
+    display: inline-block;
+    width: 220px;
+    vertical-align: top;
+    margin-left: 48px;
+}
+.footer-section h3 {
+    font-family: 'Russo One', Arial, sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #fff;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.footer-section ul li a:hover {
+    opacity: 1;
+}
+.footer-copy {
+    text-align: left;
+    font-size: 0.95rem;
+    color: #fff;
+    margin: 32px 0 16px 48px;
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero-img, .hero-info {
+        width: 100%;
+    }
+    .leia-mais-content {
+        flex-direction: column;
+    }
+    .leia-mais-img {
+        margin: 24px 0 0 0;
+        align-self: center;
+    }
+    .footer-section {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 24px;
+    }
+    .footer {
+        align-items: flex-start;
+        padding-left: 24px;
+    }
+    .footer-copy {
+        margin-left: 0;
+    }
+}

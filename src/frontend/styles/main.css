@@ -42,41 +42,20 @@ body {
     align-items: center;
     gap: 16px;
 }
-.icon-menu, .icon-bell, .icon-user {
+
+
+.icon-img {
     width: 28px;
     height: 28px;
-    display: inline-block;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
     background: #fff;
-    border-radius: 50%;
-    position: relative;
-}
-.icon-menu::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 7px; top: 11px;
-    width: 14px; height: 2px;
-    background: #2c180f;
-    box-shadow: 0 5px 0 #2c180f, 0 10px 0 #2c180f;
-}
-.icon-bell::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 9px; top: 8px;
-    width: 10px; height: 10px;
-    border-radius: 50% 50% 40% 40%;
-    background: #f9c22e;
-}
-.icon-user::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 7px; top: 7px;
-    width: 14px; height: 14px;
-    border-radius: 50%;
-    background: #f9c22e;
     border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+.icon-img:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
 }
 
 .hero {

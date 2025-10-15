@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário Interativo</title>
+  <link rel="stylesheet" href="../styles/Cadastro.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo"><img src="arremata logo white.png" alt="Logo Arremata"></div>
+    <div class="profile">
+      <img src="Perfil Arremata.png" alt="Perfil" class="profile-img">
+    </div>
+  </header>
+
+  <h1>CADASTRO</h1>
+
+  <form id="cadastroForm">
+    <!-- Nome -->
+    <label for="nome">Nome completo</label>
+    <input type="text" id="nome">
+
+    <!-- RG -->
+    <label for="rg">RG</label>
+    <input type="text" id="rg">
+
+    <!-- Estado  -->
+    <label for="estado">Estado</label>
+    <select id="estado">
+      <option value="" disabled selected>Selecione seu estado</option>
+    </select>
+    
+    <!-- Cidade -->
+    <label for="cidade">Cidade</label>
+    <select id="cidade" disabled> <option value="" disabled selected>Selecione sua cidade</option>
+      </select>
+
+    <!-- E-mail -->
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" />
+    <div id = "mensagemEmail" class="error-message" style="color: red;"></div>
+                        
+    <!-- Telefone -->
+    <label for="telefone">Número de telefone</label>
+    <input type="text" id="telefone">
+
+    <!-- Senha -->
+    <label for="senha">Senha</label>
+    <input type="password" id="senha">
+    <div class="password-strength" id="senhaForca"></div>
+
+    <label class="custom-checkbox">
+      <input type="checkbox" id="termos">
+      Aceito os termos e condições
+    </label>
+
+    <div class="form-actions">
+      <button type="button" class="btn-back">← Voltar</button>
+      <button type="submit" id="btnEnviar" class="btn-next" disabled>Prosseguir</button>
+    </div>
+
+    <div class="error-summary" id="resumoErros"></div>
+    <div class="success-message" id="sucessoEnvio" style="display:none;">
+      Formulário enviado com sucesso!
+    </div>
+  </form>
+  <script src="../scripts/Cadastro.js"></script>
+</body>
+</html>

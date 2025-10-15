@@ -1,0 +1,190 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #faf3ea;
+  margin: 0;
+  padding: 0;
+}
+/* Ajustes do header de cima */
+.top-header {
+  background: #2d180c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 1.5rem 2px 1.5rem;
+  /* CIMA DIREITA BAIXO ESQUERDA */
+}
+
+.logo img {
+  height: 80px; /* Defina uma altura fixa. 80px é um bom valor, similar à imagem de perfil. */
+  width: auto; /* Mantém a proporção da imagem automaticamente. */
+  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do top-header */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #ffcc3a;
+  background: #fff;
+  object-fit: cover;
+}
+
+form#cadastroForm {
+  background: #faf3ea;
+  max-width: 600px;
+  margin: 32px auto 0 auto;
+  padding: 32px 32px 24px 32px;
+  border-radius: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  margin-top: 18px;
+  margin-bottom: 3px;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #2d180c;
+}
+
+h1 {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+input[type=text], input[type=password], input[type=email], select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 0;
+  border-radius: 8px;
+  border: 2px solid #2d180c;
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  
+}
+
+
+/* foco acessível */
+input:focus, select:focus, textarea:focus {
+outline: 3px solid rgba(10,102,194,.2);
+border-color: var(--cor-primaria);
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, select:focus {
+  border-color: #ffcc3a;
+  background: #ffffff;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+  accent-color: #2d180c;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 1rem;
+  color: #2d180c;
+  font-weight: normal;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: #2d180c;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0 16px 0 0;
+  transition: color 0.2s;
+}
+
+.btn-back:hover {
+  color: #ffcc3a;
+}
+
+.btn-next {
+  background: #fff;
+  color: #2d180c;
+  border: 2px solid #2d180c;
+  border-radius: 18px;
+  font-size: 1.2rem;
+  padding: 10px 38px;
+  cursor: pointer;
+  font-weight: normal;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-next:hover:enabled {
+  background: #ffcc3a;
+  color: #2d180c;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.error-summary {
+  border: 1px solid red;
+  background-color: #ffe6e6;
+  padding: 10px;
+  margin-top: 15px;
+  display: none;
+}
+
+.password-strength {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.strength-weak {
+  color: red;
+}
+
+.strength-medium {
+  color: orange;
+}
+
+.strength-strong {
+  color: green;
+}

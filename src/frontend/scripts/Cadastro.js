@@ -35,6 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
     nomeInput.classList.remove("input-error"); // Remove a classe
   }
 });
+
+  // ------------------------------
+  // API DE ESTADOS E CIDADES
+  // ------------------------------
+
 // API para carregar estados e cidades do Brasil
     const selectEstado = document.getElementById("estado");
     const selectCidade = document.getElementById("cidade");
@@ -97,29 +102,40 @@ document.addEventListener("DOMContentLoaded", function () {
   // EMAIL – VALIDAÇÃO E MENSAGEM DE ERRO
   // ------------------------------
      // Efeio blur no campo de email
-    const inputEmail = document.getElementById("email");
-    const msgEmail = document.getElementById("mensagemEmail");
+  const inputEmail = document.getElementById("email");
+const msgEmail = document.getElementById("mensagemEmail");
 
-    // Evento de perda de foco (blur)
-    inputEmail.addEventListener("blur", function() {
-        const email = inputEmail.value.trim(); // Remove espaços em branco
-        // Expressão regular simples para validar email
-        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Função para validar email e exibir mensagem
+function validarEmailDinamico() {
+  const email = inputEmail.value.trim();
+  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (email === "") { // Campo vazio
-            msgEmail.textContent = "O e-mail é obrigatório.";
-            msgEmail.style.color = "red";
-        } else if (!regexEmail.test(email)) { // E-mail inválido
-            msgEmail.textContent = "Por favor, insira um e-mail válido.";
-            msgEmail.style.color = "red";
-        } else { // E-mail válido
-            msgEmail.textContent = "E-mail válido.";
-            msgEmail.style.color = "green";
-        }
-    });
+  if (email === "") {
+    msgEmail.textContent = "O e-mail é obrigatório.";
+    msgEmail.style.color = "red";
+    msgEmail.style.display = "block";   // mostrar
+  } else if (!regexEmail.test(email)) {
+    msgEmail.textContent = "Por favor, insira um e-mail válido.";
+    msgEmail.style.color = "red";
+    msgEmail.style.display = "block";   // mostrar
+  } else {
+    msgEmail.textContent = "E-mail válido.";
+    msgEmail.style.color = "green";
+    msgEmail.style.display = "block";   // mostrar como mensagem de sucesso
+    // ou, se preferir, você pode ocultar a mensagem e só mostrar quando houver erro
+    // msgEmail.style.display = "none";
+  }
+}
+
+// Adicionar listener no evento input
+inputEmail.addEventListener("input", validarEmailDinamico);
+
+// Você pode manter o listener blur também (para reforçar quando sair do campo)
+inputEmail.addEventListener("blur", validarEmailDinamico);
+
 
   // ------------------------------
-  // ETAPA 5 – SENHA COM INDICADOR DE FORÇA
+  //  SENHA COM INDICADOR DE FORÇA
   // ------------------------------
   const senhaInput = document.getElementById("senha");
   const senhaForca = document.getElementById("senhaForca");
@@ -146,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ------------------------------
-  // ETAPA 4 e 5 – VALIDAÇÃO COMPLETA E ENVIO
+  //  VALIDAÇÃO COMPLETA E ENVIO
   // ------------------------------
   const cursoSelect = document.getElementById("curso");
   const termosCheck = document.getElementById("termos");

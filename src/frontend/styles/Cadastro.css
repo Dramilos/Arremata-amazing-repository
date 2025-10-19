@@ -30,7 +30,7 @@ body {
   object-fit: cover;
 }
 
-form#cadastroForm {
+form#Formulario {
   background: #faf3ea;
   max-width: 600px;
   margin: 32px auto 0 auto;

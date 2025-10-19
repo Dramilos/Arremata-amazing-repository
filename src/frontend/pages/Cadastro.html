@@ -15,14 +15,14 @@
 
   <h1>CADASTRO</h1>
 
-  <form id="cadastroForm">
+  <form id="Formulario">
     <!-- Nome -->
     <label for="nome">Nome completo</label>
     <input type="text" id="nome">
 
     <!-- RG -->
     <label for="rg">RG</label>
-    <input type="text" id="rg">
+    <input type="text" id="rg" maxlength="12" placeholder="xx.xxx.xxx-x">
 
     <!-- Estado  -->
     <label for="estado">Estado</label>
@@ -42,7 +42,7 @@
     
     <!-- Telefone -->
     <label for="telefone">Número de telefone</label>
-    <input type="text" id="telefone">
+    <input type="number" id="telefone" maxlength="11" placeholder="(xx) xxxxx-xxxx">
 
     <!-- Senha -->
     <label for="senha">Senha</label>
@@ -55,8 +55,8 @@
     </label>
 
     <div class="form-actions">
-      <button type="button" class="btn-back">← Voltar</button>
-      <button type="submit" id="btnEnviar" class="btn-next" disabled>Prosseguir</button>
+      <button type="button" class="btn-back" >← Voltar</button>
+      <button type="submit" id="btnEnviar" class="btn-next"  disabled>Prosseguir</button>
     </div>
 
     <div class="error-summary" id="resumoErros"></div>

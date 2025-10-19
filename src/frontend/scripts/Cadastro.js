@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ETAPA 1 – CAMPO NOME (espelho e contador)
   // ------------------------------
   const nomeInput = document.getElementById("nome");
-  const form = document.getElementById("cadastroForm");
+  const form = document.getElementById("Formulário");
 
   // Cria dinamicamente o espelho e o contador
   const nomeEspelho = document.createElement("div");
@@ -144,10 +144,10 @@ inputEmail.addEventListener("blur", validarEmailDinamico);
     const senha = senhaInput.value;
     let forca = 0;
 
-    if (senha.length >= 6) forca++;
-    if (/[A-Z]/.test(senha)) forca++;
-    if (/[0-9]/.test(senha)) forca++;
-    if (/[^A-Za-z0-9]/.test(senha)) forca++;
+    if (senha.length >= 6) forca++; // mínimo 6 caracteres
+    if (/[A-Z]/.test(senha)) forca++; // letra maiúscula
+    if (/[0-9]/.test(senha)) forca++; // número
+    if (/[^A-Za-z0-9]/.test(senha)) forca++; // caractere especial
 
     if (forca <= 1) {
       senhaForca.textContent = "Senha fraca";
@@ -161,6 +161,8 @@ inputEmail.addEventListener("blur", validarEmailDinamico);
     }
   });
 
+
+  /* Refazer a validação completa e envio*/
   // ------------------------------
   //  VALIDAÇÃO COMPLETA E ENVIO
   // ------------------------------
@@ -218,4 +220,68 @@ inputEmail.addEventListener("blur", validarEmailDinamico);
       setTimeout(() => (sucessoEnvio.style.display = "none"), 4000);
     }
   });
+  /*
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("Formulario");
+    const botaoEnviar = document.getElementById("btnEnviar");
+    const mensagemSucesso = document.getElementById("sucessoEnvio");
+
+    formulario.addEventListener("submit", function (event) {
+      const nome = document.getElementById("nome").value.trim();
+      const rg = document.getElementById("rg").value.trim();
+      const estado = document.getElementById("estado").value;
+      const cidade = document.getElementById("cidade").value;
+      const senha = document.getElementById("senha").value;
+      const email = document.getElementById("email").value.trim();
+      const termosAceitos = document.getElementById("termos").checked;
+
+      // Validações
+      if (
+        nome.length > 3 &&
+        nome.length <= 50 &&
+        rg.length <= 9 &&
+        estado !== "" &&
+        cidade !== "" &&
+        forca >= 2 &&
+        email !== "" &&
+        termosAceitos === true
+      ) {
+        // Formulário válido, permite o envio
+        mensagemSucesso.style.display = "block";
+        setTimeout(() => {
+          mensagemSucesso.style.display = "none";
+        }, 4000);
+        // remover disabled de o botão enviar
+        botaoEnviar.disabled = false;
+      
+
+      } else {
+        // Formulário inválido, impede o envio
+        event.preventDefault();
+        alert("Por favor, corrija os erros no formulário antes de enviar.");
+      }
+      // Escuta alterações em todos os campos
+  Object.values(campos).forEach((campo) => {
+    campo.addEventListener("input", validarCampos);
+    campo.addEventListener("change", validarCampos);
+  });
+
+  // Ao enviar o formulário
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Formulário enviado com sucesso!");
+    form.reset();
+    btnEnviar.disabled = true;
+  });
+
+
+    });
+
+  });*/
 });
+
+
+
+  
+

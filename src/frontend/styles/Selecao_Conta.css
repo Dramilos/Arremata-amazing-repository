@@ -1,0 +1,95 @@
+:root {
+    /* Cores base */
+    --amarelo-fundo: #ffc107; /* Um amarelo/laranja forte */
+    --laranja-logo: #ff7f00; /* Laranja da logo */
+    --laranja-sombra-logo: #8b4513; /* Marrom escuro para a sombra */
+    --branco: #ffffff;
+    --preto: #000000;
+}
+
+body {
+    /* Ocupa a tela inteira */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Aplica a cor de fundo amarela */
+    background-color: var(--amarelo-fundo); 
+    /* Fonte simples (pode ser ajustada para a fonte real que você usa) */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* O container branco central */
+.card-container {
+    background-color: var(--branco);
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    /* Define a largura máxima do cartão */
+    max-width: 700px;
+    width: 90%;
+    /* Adiciona uma pequena sombra se desejar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a logo Arremata */
+.logo-arremata {
+    font-size: 60px;
+    font-weight: bold;
+    color: #251109; /* A cor principal do texto agora é a cor da sombra */
+    margin-bottom: 20px;
+    /* Efeito de sombra que simula a profundidade na logo */
+    text-shadow: -6px 0px 0 var(--laranja-logo); /* <-- Esta é a linha chave alterada */
+    letter-spacing: 2px;
+}
+
+/* Estilo para a pergunta */
+.question {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: var(--preto);
+}
+
+/* Container para os dois botões */
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* Estilo dos botões/caixas de seleção */
+.account-choice {
+    /* Faz com que os botões ocupem o mesmo espaço */
+    flex-basis: 50%;
+    /* Borda preta e grossa, como na imagem */
+    border: 3px solid var(--preto);
+    border-radius: 10px;
+    padding: 30px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Remove o sublinhado se for um link */
+    text-decoration: none; 
+    color: var(--preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efeito ao passar o mouse para indicar que é clicável */
+.account-choice:hover {
+    background-color: #f7d796db;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 450px) {
+    .button-group {
+        /* Empilha os botões em telas pequenas */
+        flex-direction: column;
+        gap: 15px;
+    }
+}

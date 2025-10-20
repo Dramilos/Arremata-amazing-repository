@@ -1,9 +1,5 @@
 # Arremata-amazing-repository
 ## O repositório do GitHub para o aplicativo "Arremata"
-<<<<<<< HEAD
-teste
-abacate frito
-=======
 
 Projeto Arremata:
 
@@ -35,4 +31,3 @@ Link para o protótipo no Figma: https://www.figma.com/design/7p3aoBcWLjmU06fwKN
   
 ## Status do Projeto
 Em desenvolvimento
->>>>>>> main

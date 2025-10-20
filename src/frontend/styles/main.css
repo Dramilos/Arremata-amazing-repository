@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 body {
+    display: grid;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
@@ -141,12 +142,15 @@ body {
 }
 
 .footer {
+    position: fixed-bottom;
+    bottom: 0;
     background: #2c180f;
     color: #fff;
     padding: 32px 0 0 0;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
 }
 .footer-section {
     display: inline-block;
@@ -209,6 +213,8 @@ body {
     .footer {
         align-items: flex-start;
         padding-left: 24px;
+        position: fixed-bottom;
+        display: block;
     }
     .footer-copy {
         margin-left: 0;

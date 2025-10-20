@@ -166,122 +166,42 @@ inputEmail.addEventListener("blur", validarEmailDinamico);
   // ------------------------------
   //  VALIDAÇÃO COMPLETA E ENVIO
   // ------------------------------
-  const cursoSelect = document.getElementById("curso");
-  const termosCheck = document.getElementById("termos");
-  const btnEnviar = document.getElementById("btnEnviar");
-  const resumoErros = document.getElementById("resumoErros");
-  const sucessoEnvio = document.getElementById("sucessoEnvio");
+  
+const formulario = document.getElementById("Formulário");
 
-  // Função de validação geral
-  function validarFormulario() {
-  const erros = [];
-  const nome = nomeInput.value.trim();
-  const email = emailInput.value.trim();
-  const curso = cursoSelect.value;
-  const termos = termosCheck.checked;
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Evita o envio padrão
 
-  if (nome.length < 3) erros.push("Nome deve ter pelo menos 3 caracteres.");
-  if (nome.length > 50) erros.push("Nome deve ter no máximo 50 caracteres."); // <-- Adicionado
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) erros.push("E-mail inválido.");
-  if (!curso) erros.push("Selecione um curso.");
-  if (!termos) erros.push("Você deve aceitar os termos.");
 
-  if (erros.length > 0) {
-    resumoErros.innerHTML = erros.map(e => `<div>• ${e}</div>`).join("");
-    resumoErros.style.display = "block";
-    btnEnviar.disabled = true;
-    return false;
-  } else {
-    resumoErros.style.display = "none";
-    btnEnviar.disabled = false;
-    return true;
-  }
-}
+    const Snome = document.getElementById("nome").value;
+    const Semail = document.getElementById("email").value;
+    const Sestado = document.getElementById("estado").value;
+    const Scidade = document.getElementById("cidade").value;
+    const Stelefone = document.getElementById("telefone").value;
+    const Ssenha = document.getElementById("senha").value;
 
-  // Observa mudanças nos campos
-  [nomeInput, emailInput, cursoSelect, termosCheck].forEach(el => {
-    el.addEventListener("input", validarFormulario);
-    el.addEventListener("change", validarFormulario);
-  });
-
-  // Intercepta o envio
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    if (validarFormulario()) {
-      sucessoEnvio.style.display = "block";
-      resumoErros.style.display = "none";
-      form.reset();
-      cidadeSelect.disabled = true;
-      btnEnviar.disabled = true;
-      senhaForca.textContent = "";
-      nomeEspelho.textContent = "";
-      contador.textContent = "";
-      setTimeout(() => (sucessoEnvio.style.display = "none"), 4000);
+    if ( Snome.valu === "" ||
+          Semail.value === "" ||
+          Sestado.value === "" ||
+          Scidade.value === "" ||
+          Stelefone.value === "" ||
+          Ssenha.value === "" ) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return; // Sai da função se algum campo estiver vazio
     }
-  });
-  /*
+    
+    // Se tudo estiver ok, pode enviar o formulário
+    formulario.submit();
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const formulario = document.getElementById("Formulario");
-    const botaoEnviar = document.getElementById("btnEnviar");
-    const mensagemSucesso = document.getElementById("sucessoEnvio");
 
-    formulario.addEventListener("submit", function (event) {
-      const nome = document.getElementById("nome").value.trim();
-      const rg = document.getElementById("rg").value.trim();
-      const estado = document.getElementById("estado").value;
-      const cidade = document.getElementById("cidade").value;
-      const senha = document.getElementById("senha").value;
-      const email = document.getElementById("email").value.trim();
-      const termosAceitos = document.getElementById("termos").checked;
+    
 
-      // Validações
-      if (
-        nome.length > 3 &&
-        nome.length <= 50 &&
-        rg.length <= 9 &&
-        estado !== "" &&
-        cidade !== "" &&
-        forca >= 2 &&
-        email !== "" &&
-        termosAceitos === true
-      ) {
-        // Formulário válido, permite o envio
-        mensagemSucesso.style.display = "block";
-        setTimeout(() => {
-          mensagemSucesso.style.display = "none";
-        }, 4000);
-        // remover disabled de o botão enviar
-        botaoEnviar.disabled = false;
-      
 
-      } else {
-        // Formulário inválido, impede o envio
-        event.preventDefault();
-        alert("Por favor, corrija os erros no formulário antes de enviar.");
-      }
-      // Escuta alterações em todos os campos
-  Object.values(campos).forEach((campo) => {
-    campo.addEventListener("input", validarCampos);
-    campo.addEventListener("change", validarCampos);
+
+
   });
 
-  // Ao enviar o formulário
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Formulário enviado com sucesso!");
-    form.reset();
-    btnEnviar.disabled = true;
-  });
-
-
-    });
-
-  });*/
 });
-
-
 
   
 

@@ -30,6 +30,15 @@ body {
   object-fit: cover;
 }
 
+form.container {
+  max-width: 600px;
+  margin: 32px auto 0 auto;
+  padding: 32px;
+  background: #faf3ea;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 form#Formulario {
   background: #faf3ea;
   max-width: 600px;

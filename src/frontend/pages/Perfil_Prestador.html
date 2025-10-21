@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - Arremata</title>
+  <link rel="stylesheet" href="../styles/Perfil_Prestador.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="logo">ARREMATA</div>
+    <nav>
+      <a href="#">Realize serviços</a>
+      <a href="#">Solicite um serviço</a>
+    </nav>
+    <div class="icons">
+      <i class="bell">🔔</i>
+      <i class="user">👤</i>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+
+    <!-- Seção de perfil -->
+    <section class="profile-info card">
+      <div class="profile-left">
+        <!-- IMAGEM DE PERFIL -->
+        <img id="profileImg" src="img/minha-foto.jpg" alt="Foto de perfil" class="profile-img">
+
+        <!-- INPUT DE ARQUIVO OCULTO -->
+        <input type="file" id="uploadImg" accept="image/*" style="display:none;">
+
+        <!-- BOTÃO PARA TROCAR FOTO -->
+        <button id="editBtn" class="edit-btn">✏️</button>
+      </div>
+
+      <div class="profile-right">
+        <div class="input-group">
+          <label>Nome</label>
+          <input type="text" class="editable" value="Nome prestador" readonly>
+        </div>
+
+        <div class="input-group">
+          <label>RG</label>
+          <input type="text" class="editable" value="98.235.572-06" readonly>
+        </div>
+
+        <div class="input-group">
+          <label>Telefone</label>
+          <input type="text" class="editable" value="11 97351-0127" readonly>
+        </div>
+
+        <div class="rating" id="rating">
+          ★★★★★
+        </div>
+
+        <div class="input-group">
+          <label>Breve descrição sobre você:</label>
+          <textarea class="editable" readonly>Sou prestador de serviços especializado...</textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avaliações -->
+    <section class="reviews card">
+      <h3>Avaliações</h3>
+
+      <div class="review">
+        <div class="client">
+          <img src="img/icone-perfil.png" alt="">
+          <span>Nome cliente</span>
+        </div>
+        <div class="stars" data-rating="4">★★★★☆</div>
+        <p>Avaliação: Excelente serviço!</p>
+      </div>
+
+      <div class="review">
+        <div class="client">
+          <img src="img/icone-perfil.png" alt="">
+          <span>Nome cliente</span>
+        </div>
+        <div class="stars" data-rating="5">★★★★★</div>
+        <p>Avaliação: Muito profissional e rápido!</p>
+      </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section class="portfolio card">
+      <h3>Portfólio</h3>
+      <div class="portfolio-item">
+        <div class="thumb">🎥</div>
+        <div class="details">
+          <p><strong>Trabalho 01</strong></p>
+          <p>Instalação elétrica residencial</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../scripts/Perfil_Prestador.js"></script>
+</body>
+</html>

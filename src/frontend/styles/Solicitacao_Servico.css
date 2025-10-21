@@ -1,0 +1,198 @@
+/* ===== RESET GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f6f3;
+}
+
+/* ===== CABEÇALHO ===== */
+.top-bar {
+  background-color: #2b1b14;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+}
+
+.top-bar .logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.top-bar nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.top-bar .icons .icon {
+  margin-left: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 0;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario {
+  background-color: #fffaf0;
+  display: flex;
+  gap: 50px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  max-width: 1080px;
+  width: 90%;
+}
+
+/* ===== CAMPOS E RÓTULOS ===== */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.coluna-esquerda, .coluna-direita {
+  flex: 1;
+}
+
+/* ===== UPLOAD ===== */
+.upload-container {
+  margin-top: 15px;
+}
+
+.upload-box {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(white, #e3e3e3);
+  border: 2px dashed #bbb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  cursor: pointer;
+  margin-top: 5px;
+  position: relative;
+}
+
+.upload-box input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* ===== TAGS DINÂMICAS ===== */
+.tags-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+#tag-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.tag span {
+  margin-right: 6px;
+}
+
+.tag button {
+  background: none;
+  border: none;
+  color: #666;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tag button:hover {
+  color: red;
+}
+
+/* ===== LANCE INICIAL ===== */
+.lance-box {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.lance-box span {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+/* ===== BOTÃO DE PUBLICAR ===== */
+.btn-publicar {
+  background: linear-gradient(180deg, #ffcc00, #ff9900);
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 50px;
+  align-self: flex-end;
+  transition: 0.2s;
+}
+
+.btn-publicar:hover {
+  background: linear-gradient(180deg, #ffe066, #ffaa00);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 900px) {
+  .formulario {
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+  }
+
+  .btn-publicar {
+    margin: 30px auto 0 auto;
+  }
+}

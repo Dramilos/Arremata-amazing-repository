@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arremata - Publicar Serviço</title>
+    <link rel="stylesheet" href="../styles/Solicitacao_Servico.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">ARREMATA</div>
+    <nav>
+      <a href="#">Realize serviços</a>
+      <a href="#">Solicite um serviço</a>
+    </nav>
+    <div class="icons">
+      <i class="icon">📁</i>
+      <i class="icon">🔔</i>
+      <i class="icon">👤</i>
+    </div>
+  </header>
+
+  <main class="container">
+    <form class="formulario">
+      <div class="coluna-esquerda">
+        <label>TÍTULO</label>
+        <input type="text" id="titulo" placeholder="Digite o título">
+
+        <label>DESCRIÇÃO</label>
+        <textarea id="descricao" placeholder="Descreva o serviço"></textarea>
+
+        <label>CIDADE</label>
+        <input type="text" id="cidade" placeholder="Informe a cidade">
+
+        <h3>DADOS DE CONTATO</h3>
+        <label>TELEFONE</label>
+        <input type="text" id="telefone" placeholder="(00) 00000-0000">
+
+        <label>E-MAIL</label>
+        <input type="email" id="email" placeholder="seuemail@exemplo.com">
+      </div>
+
+      <div class="coluna-direita">
+        <div class="upload-container">
+          <label>ADICIONAR FOTO</label>
+          <div class="upload-box" id="foto-box">
+            <input type="file" accept="image/*">
+            <span>ADD MEDIA</span>
+          </div>
+        </div>
+
+        <div class="upload-container">
+          <label>ADICIONAR VÍDEO</label>
+          <div class="upload-box" id="video-box">
+            <input type="file" accept="video/*">
+            <span>ADD MEDIA</span>
+          </div>
+        </div>
+
+        <label>TAGS</label>
+        <div class="tags-container">
+          <input type="text" id="tag-input" placeholder="Digite e pressione Enter">
+          <div id="tags"></div>
+        </div>
+
+        <label>LANCE INICIAL</label>
+        <div class="lance-box">
+          <span>R$</span>
+          <input type="number" id="lance" min="0">
+        </div>
+
+        <button type="submit" class="btn-publicar">PUBLICAR</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="Solicitacao_Servico.html"></script>
+</body>
+</html>

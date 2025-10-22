@@ -1,0 +1,77 @@
+body {
+    display: grid;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #23160f;
+}
+
+.header {
+    background: #2c180f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 56px;
+    justify-content: space-between;
+}
+
+#img-arremata {
+    margin-right: 24px;
+    width: 200px;
+    height: 70px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #fff;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+
+.icon-img:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+.icon-img-branca {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #2c180f;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+
+.icon-img-branca:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,67 @@
+:root {
+            /* Cores base (mantenha estas no seu código) */
+            --amarelo-fundo: #ffc107; 
+            --laranja-logo: #ff7f00; 
+            --laranja-sombra-logo: #8b4513; 
+            --branco: #ffffff;
+            --preto: #000000;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--amarelo-fundo); 
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* O container branco central */
+        .card-container {
+            background-color: var(--branco);
+            padding: 40px 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para a logo Arremata (AJUSTADO) */
+        .logo-arremata {
+            font-size: 60px;
+            font-weight: bold;
+            color: #251109; /* A cor principal do texto agora é a cor da sombra */
+            margin-bottom: 20px;
+            /* Efeito de sombra que simula a profundidade na logo */
+            text-shadow: -6px 0px 0 var(--laranja-logo); /* <-- Esta é a linha chave alterada */
+            letter-spacing: 2px;
+}
+
+        /* Estilo para a mensagem de conclusão */
+        .message {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: var(--preto);
+        }
+
+        /* Estilo do botão "Voltar para o site" */
+        .action-button {
+            /* Como na tela de "Escolha de Conta" */
+            display: inline-block;
+            border: 3px solid var(--preto);
+            border-radius: 10px;
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none; 
+            color: var(--preto);
+        }
+
+        .action-button:hover {
+            background-color: #f7d796db;
+        }

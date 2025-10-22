@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 body {
+    display: grid;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
@@ -18,11 +19,11 @@ body {
     justify-content: space-between;
 }
 
-.logo {
-    font-family: 'Russo One', Arial, sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
+
+#img-arremata {
     margin-right: 24px;
+    width: 200px;
+    height: 70px;
 }
 
 .nav a {
@@ -55,6 +56,20 @@ body {
     transition: box-shadow 0.2s;
 }
 .icon-img:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+.icon-img-branca {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #2c180f;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+.icon-img-branca:hover {
     box-shadow: 0 0 0 2px #f9c22e;
 }
 
@@ -127,12 +142,15 @@ body {
 }
 
 .footer {
+    position: fixed-bottom;
+    bottom: 0;
     background: #2c180f;
     color: #fff;
     padding: 32px 0 0 0;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
 }
 .footer-section {
     display: inline-block;
@@ -195,6 +213,8 @@ body {
     .footer {
         align-items: flex-start;
         padding-left: 24px;
+        position: fixed-bottom;
+        display: block;
     }
     .footer-copy {
         margin-left: 0;

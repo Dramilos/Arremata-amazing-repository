@@ -25,13 +25,11 @@ body {
   padding: 35px 40px;
 }
 
-.logo {
-  text-align: center;
-  color: #5b2600;
-  font-weight: 900;
-  font-size: 32px;
-  margin: 0;
-  letter-spacing: 1px;
+#img-arremata {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .subtitle {

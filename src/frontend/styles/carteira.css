@@ -2,7 +2,7 @@ body {
     display: grid;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
+    background: #faf6ea;
     color: #23160f;
 }
 
@@ -70,7 +70,20 @@ body {
     box-shadow: 0 0 0 2px #f9c22e;
 }
 
-h1 {
+.saldo-barra {
+    background: linear-gradient(to right, #ff9800, #ffc107); /* Gradiente de amarelo */
+    color: white;  /* Cor do texto */
+    padding: 2rem 20px;  /* Espaçamento interno */
+    font-size: 20px;  /* Tamanho do texto */
+    font-weight: bold;  /* Deixa o texto em negrito */
+    border-radius: 5px;  /* Bordas arredondadas */
+    display: flex;
+    justify-content: space-between;  /* Alinha o texto à esquerda e direita */
+    align-items: center;  /* Alinha o texto verticalmente no meio */
+}
+
+span {
+    font-size: 60px;
     margin-left: auto;
     margin-right: auto;
 }

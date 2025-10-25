@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Arremata - O maior site de trabalhadores do Brasil</title>
+    <link rel="stylesheet" href="../styles/lance.css">
+  </head>
+  <header class="header">
+            <a href="../index.html">
+                <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
+            </a>            
+        <nav class="nav">
+            <a href="#">Realize serviços</a>
+            <a href="#">Solicite um serviço</a>
+        </nav>
+        <div class="header-icons">
+            <a href="../pages/Carteira.html">
+                <img src="../components/Imagens/Carteira.png" alt="Menu" class="icon-img-branca" />
+            </a>
+            <a href="#">    
+                <img src="../components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
+            </a>
+            <a href="../pages/Selecao_Conta.html">
+                <img src="../components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
+            </a>
+        </div>
+    </header>
+<body>
+  <main class="lance-page">
+
+    <!-- resumo do serviço (parte superior) -->
+    <section class="service-summary">
+      <div class="service-left">
+        <img src="../components/Imagens/Perfil_foto.png" alt="Foto do cliente" class="client-avatar" />
+
+        <div class="service-meta">
+          <h2 class="service-title">Título do serviço</h2>
+          <div class="client-name">Nome do cliente</div>
+
+          <div class="service-tags">
+            <span class="tag tag-orange">Tags</span>
+            <span class="tag tag-purple">Tags</span>
+          </div>
+
+          <p class="service-desc">
+            Explicando o problema...<br />
+            Linha adicional de descrição...<br />
+            Linha adicional de descrição...
+          </p>
+        </div>
+      </div>
+
+      <div class="service-right">
+        <div class="service-rating" aria-label="Avaliação">
+          <!-- estrelas podem ser estilizadas via CSS -->
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+
+        <div class="service-media" aria-hidden="true">
+          <!-- miniatura / vídeo do serviço (substituir por img/video real) -->
+          <div class="media-thumb">▶</div>
+        </div>
+
+        <div class="service-price">R$ 200</div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- lista de lances (parte inferior) -->
+    <section class="bids">
+      <ul class="bids-list">
+
+        <li class="bid">
+          <img src="../components/Imagens/Perfil_foto.png" alt="Foto do prestador" class="bid-avatar" />
+          <div class="bid-content">
+            <div class="bid-top">
+              <span class="provider-name">Nome prestador</span>
+              <span class="provider-tag tag-purple"></span>
+            </div>
+            <div class="bid-bottom">
+              <span class="bid-price">R$ 250</span>
+              <span class="bid-trend up" aria-hidden="true">↑</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="bid">
+          <img src="../components/Imagens/Perfil_foto.png" alt="Foto do prestador" class="bid-avatar" />
+          <div class="bid-content">
+            <div class="bid-top">
+              <span class="provider-name">Nome prestador</span>
+              <span class="provider-tag tag-orange"></span>
+            </div>
+            <div class="bid-bottom">
+              <span class="bid-price">R$ 100</span>
+              <span class="bid-trend down" aria-hidden="true">↓</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="bid">
+          <img src="../components/Imagens/Perfil_foto.png" alt="Foto do prestador" class="bid-avatar" />
+          <div class="bid-content">
+            <div class="bid-top">
+              <span class="provider-name">Nome prestador</span>
+              <span class="provider-tag tag-purple"></span>
+            </div>
+            <div class="bid-bottom">
+              <span class="bid-price">R$ 200</span>
+              <span class="bid-trend neutral" aria-hidden="true">◌</span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+</body>
+</html>

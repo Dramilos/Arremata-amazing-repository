@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8">
-    <title>Carteira - Arremata</title>
+    <title>Arremata - O maior site de trabalhadores do Brasil</title>
     <link rel="stylesheet" href="../styles/carteira.css">
-  </head>
-  <header class="header">
+</head>
+<body>
+    <header class="header">
             <a href="../index.html">
                 <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
             </a>            
+        
+
         <nav class="nav">
             <a href="#">Realize serviços</a>
             <a href="#">Solicite um serviço</a>
@@ -20,12 +24,19 @@
             <a href="notificacoes.html">    
                 <img src="../components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
             </a>
-            <a href="Usuário.html">
+            <a href="../pages/Selecao_Conta.html">
                 <img src="../components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
             </a>
         </div>
   </header>
 <body>
-    <h1>Saldo: R$200,00</h1>
+    <div class="saldo-barra">
+        <span class="saldo">Saldo: R$ 200,00</span>
+    </div>
+
+    <h1 class="pagamento">Formas de pagamento</h1>
+      <button id="addPagamento">Adicionar outras formas de pagamento</button>
+      <button id="emailRecibo">Email para o envio do recibo</button>
+    </div>
 </body>
 </html>

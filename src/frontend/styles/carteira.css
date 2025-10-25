@@ -2,7 +2,7 @@ body {
     display: grid;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
+    background: #faf6ea;
     color: #23160f;
 }
 
@@ -70,7 +70,47 @@ body {
     box-shadow: 0 0 0 2px #f9c22e;
 }
 
-h1 {
+.saldo-barra {
+    background: linear-gradient(to right, #ff9800, #ffc107); /* Gradiente de amarelo */
+    color: white;  /* Cor do texto */
+    padding: 3rem;  /* Espaçamento interno */
+    font-size: 20px;  /* Tamanho do texto */
+    font-weight: bold;  /* Deixa o texto em negrito */
+    text-shadow:0px 2px 6px #77675e;
+    display: flex;
+    box-shadow: 0px 2px 6px #77675e;
+    justify-content: space-between;  /* Alinha o texto à esquerda e direita */
+    align-items: center;  /* Alinha o texto verticalmente no meio */
+}
+
+.pagamento {
+    padding: 1rem 0px 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+button {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d3d3d3;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0c0c0;
+}
+
+span {
+    font-size: 60px;
     margin-left: auto;
     margin-right: auto;
 }

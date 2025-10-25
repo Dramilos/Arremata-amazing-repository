@@ -1,0 +1,325 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root{
+  --brown:#2c180f;
+  --cream:#fff9f3;
+  --accent:#f9c22e;
+  --accent-dark:#f57412;
+  --purple:#6b46ff;
+  --text:#23160f;
+}
+
+/* page */
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:var(--cream);
+  color:var(--text);
+}
+
+/* header left as-is (don't change structure) */
+.header{
+  background:var(--brown);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  height:56px;
+  justify-content:space-between;
+}
+
+#img-arremata {
+    margin-right: 24px;
+    width: 200px;
+    height: 70px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #fff;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+
+.icon-img:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+.icon-img-branca {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #2c180f;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+
+.icon-img-branca:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+/* main layout */
+.lance-page{
+  max-width:1100px;
+  margin: 22px auto;
+  padding: 0 18px 40px;
+  box-sizing:border-box;
+}
+
+/* --- Service summary (top) --- */
+.service-summary{
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+  padding:18px 10px;
+}
+
+/* left column (avatar + meta) */
+.service-left{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  flex:1;
+  min-width:0;
+}
+
+.client-avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#e6e6e6;
+  border:6px solid var(--brown);
+  flex-shrink:0;
+}
+
+/* meta */
+.service-meta{
+  flex:1;
+  min-width:0;
+}
+
+/* title in a grey bar */
+.service-title{
+  display:inline-block;
+  background:#d9d9d9;
+  color:var(--text);
+  font-family:'Russo One', Arial, sans-serif;
+  font-size:28px;
+  padding:8px 12px;
+  margin:0 0 10px 0;
+  max-width:100%;
+  box-sizing:border-box;
+}
+
+/* client name and tags */
+.client-name{
+  margin-top:4px;
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.service-tags{
+  margin-bottom:10px;
+}
+.service-tags .tag{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:4px;
+  font-weight:600;
+  color:#111;
+  margin-right:10px;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.06);
+}
+.tag-orange{ background:var(--accent-dark); color:#fff; }
+.tag-purple{ background:var(--purple); color:#fff; }
+
+/* description lines */
+.service-desc{
+  margin:8px 0 0 0;
+  line-height:1.8;
+  font-size:16px;
+  color:var(--text);
+  max-width:700px;
+}
+
+/* right column (rating / media / price) */
+.service-right{
+  width:260px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:12px;
+  flex-shrink:0;
+}
+
+/* rating stars */
+.service-rating{
+  display:flex;
+  gap:6px;
+}
+.service-rating .star{
+  color:var(--accent);
+  font-size:20px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.12);
+}
+
+/* media thumbnail */
+.service-media .media-thumb{
+  width:150px;
+  height:100px;
+  background:#dcdcdc;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:4px;
+  color:#fff;
+  font-size:28px;
+  box-shadow: inset 0 -6px 0 rgba(0,0,0,0.03);
+}
+
+/* price */
+.service-price{
+  font-size:30px;
+  font-weight:800;
+  color:var(--text);
+  margin-top:6px;
+}
+
+/* divider */
+.divider{
+  border:0;
+  border-top:3px solid var(--text);
+  margin:18px 0;
+}
+
+/* --- Bids list (bottom) --- */
+.bids-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+/* each bid */
+.bid{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  padding:16px 6px;
+  border-bottom:2px solid rgba(35,22,15,0.12);
+}
+
+/* small avatar for bidder */
+.bid-avatar{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#e6e6e6;
+  border:4px solid var(--brown);
+  flex-shrink:0;
+}
+
+/* content area */
+.bid-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  gap:12px;
+}
+
+/* left block inside content */
+.bid-top{
+  display:flex;
+  flex-direction:column;
+}
+
+/* provider name and small colored bar (tag) */
+.provider-name{
+  font-size:16px;
+  margin-bottom:6px;
+}
+.provider-tag{
+  height:10px;
+  width:48px;
+  border-radius:3px;
+  display:inline-block;
+}
+.tag-purple.provider-tag{ background:var(--purple); }
+.tag-orange.provider-tag{ background:var(--accent-dark); }
+
+/* bid bottom: price + trend */
+.bid-bottom{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:18px;
+  font-weight:700;
+}
+
+/* price */
+.bid-price{
+  font-size:20px;
+  color:var(--text);
+  font-weight:800;
+}
+
+/* trend arrows */
+.bid-trend{
+  font-size:20px;
+  line-height:1;
+  margin-left:6px;
+}
+.bid-trend.up{ color:#e53935; }    /* red up arrow */
+.bid-trend.down{ color:#2ecc71; }  /* green down arrow */
+.bid-trend.neutral{ color:#666; }
+
+/* small progress bar under each bid (visual separator like image) */
+.bid + .bid{
+  margin-top:0;
+}
+
+/* responsive */
+@media (max-width:900px){
+  .service-summary{
+    flex-direction:column;
+    gap:12px;
+  }
+  .service-right{
+    width:100%;
+    align-items:flex-start;
+    flex-direction:row;
+    justify-content:space-between;
+  }
+  .service-title{ font-size:22px; }
+  .client-avatar{ width:90px; height:90px; }
+  .service-price{ font-size:22px; }
+  .lance-page{ padding: 0 12px 40px; }
+}

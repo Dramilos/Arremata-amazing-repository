@@ -10,13 +10,13 @@ body {
 }
 
 .header {
-    background: #2c180f;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 0 32px;
-    height: 56px;
-    justify-content: space-between;
+  background: #2d180c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 1.5rem 2px 1.5rem;
+  /* CIMA DIREITA BAIXO ESQUERDA */
 }
 
 

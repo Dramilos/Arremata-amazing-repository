@@ -1,0 +1,445 @@
+/* Modal de categorias pop-out */
+.categorias-modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+/* Garantir que o atributo hidden realmente esconda o modal (autor CSS pode sobrescrever o UA) */
+.categorias-modal[hidden] {
+    display: none !important;
+    visibility: hidden !important;
+}
+.categorias-modal-content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.28), 0 6px 0 rgba(0,0,0,0.06) inset;
+    padding: 36px 44px 28px 44px;
+    min-width: 520px;
+    max-width: 88vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+.categorias-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #fff;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.categorias-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 8px;
+}
+.categorias-row {
+    display: flex;
+    gap: 28px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.categoria-btn {
+    background: #fff;
+    color: #23160f;
+    border: 3px solid #f28c2c;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 8px 28px;
+    margin: 0;
+    box-shadow: 0 6px 0 rgba(242,140,44,0.12);
+    cursor: pointer;
+    transition: transform 0.08s ease, box-shadow 0.12s ease, background 0.12s;
+    outline: none;
+}
+.categoria-btn.categoria-selecionada {
+    background: #f28c2c;
+    color: #fff;
+    box-shadow: 0 8px 0 rgba(242,140,44,0.22);
+    border-color: #f28c2c;
+}
+.categorias-modal h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 6px 0 4px 0;
+    text-align: left;
+}
+
+/* Quando o modal estiver aberto, aplicar blur leve ao conteúdo de fundo */
+.modal-open .container,
+.modal-open .header {
+    filter: blur(2px) brightness(0.95);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Responsividade do modal */
+@media (max-width: 720px) {
+    .categorias-modal-content { padding: 20px; min-width: 320px; }
+    .categorias-row { gap: 14px; justify-content: center; }
+    .categoria-btn { font-size: 1rem; padding: 8px 18px; }
+}
+
+/* Reset e configurações globais
+-------------------------------------------------- */
+body {
+    display: grid;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff9f3; /* Fundo coral claro */
+    color: #23160f; /* Texto marrom escuro */
+}
+
+/* Header principal
+-------------------------------------------------- */
+.header {
+    background: #2c180f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 56px;
+    justify-content: space-between;
+}
+
+#img-arremata {
+    margin-right: 24px;
+    width: 200px;
+    height: 70px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #fff;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+
+.icon-img:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+.icon-img-branca {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #2c180f;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+
+.icon-img-branca:hover {
+    box-shadow: 0 0 0 2px #f9c22e; /* Borda amarela no hover */
+}
+
+/* Layout principal da página
+-------------------------------------------------- */
+.container {
+    width: min(1100px, 92%);
+    margin: 28px auto;
+    display: block;
+    gap: 20px;
+}
+
+/* Painel de busca e filtros
+-------------------------------------------------- */
+/* Container principal do painel de busca */
+.search-panel {
+    background: linear-gradient(180deg,#efefef,#dcdcdc); /* Gradiente cinza suave */
+    border: 2px solid #bfbfbf;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.15); /* Sombra inferior sutil */
+}
+.search-inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+/* Campo de busca com borda arredondada */
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 28px; /* Borda bem arredondada */
+    padding: 6px 12px;
+    border: 2px solid #cfcfcf;
+}
+.search-box input[type="search"] {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    padding: 8px 12px;
+    background: transparent;
+}
+.search-btn {
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+/* Ícone de busca (substitui o emoji) */
+.search-btn .search-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    object-fit: contain;
+}
+/* Botão de filtro quadrado */
+.filter-btn {
+    width: 52px;
+    height: 52px; /* Mantém formato quadrado */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+.filter-btn .filter-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+/* Container dos chips de filtro */
+.chips {
+    margin-top: 14px;
+    display: flex;
+    gap: 12px;
+}
+
+/* Chips individuais de filtro */
+.chip {
+    background: #f28c2c; /* Laranja marca registrada */
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.12); /* Sombra sutil */
+}
+
+/* Grid de cartões de serviços
+-------------------------------------------------- */
+/* Layout responsivo em grid */
+.cards-grid {
+    margin-top: 28px;
+    display: grid;
+    /* Forçar 2 cards por linha em larguras maiores */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colunas */
+    gap: 20px;
+}
+/* Estilo base dos cartões */
+.card {
+    background: linear-gradient(180deg,#ffffff,#e9e9e9); /* Gradiente branco-cinza */
+    border: 2px solid #bdbdbd;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.12); /* Sombra inferior */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.card-alt {
+    background: linear-gradient(180deg,#efefef,#dcdcdc);
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #2c180f;
+    background: #fff;
+}
+.card-title {
+    margin: 0;
+    font-size: 1.1rem;
+    background: #cfcfcf;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+/* Container flexível para categorias e preço */
+.categories-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 6px;
+    gap: 12px;
+}
+
+.categories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.category {
+    background: #f28c2c;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Estilo do preço com legenda */
+.price {
+    background: #ccc;
+    padding: 6px 10px 6px 6px; /* Menos padding à esquerda */
+    border-radius: 4px;
+    text-align: right;
+    min-width: 90px;
+}
+
+.price-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 1px;
+}
+
+.price-value {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #23160f;
+    line-height: 1.2;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+.thumb {
+    background: #bdbdbd;
+    width: 120px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.6rem;
+}
+.description {
+    margin-top: 10px;
+    color: #23160f;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+/* Indicador de melhor oferta */
+.best-offer {
+    background: #ffd43b;
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Botão ver mais com ícone */
+.more-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid #000;
+    padding: 6px 10px;
+    color: #23160f;
+    cursor: pointer;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.more-btn:hover {
+    background: rgba(0,0,0,0.05);
+    border-color: #666;
+}
+
+.more-icon {
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+
+/* Utilitários e classes de acessibilidade
+-------------------------------------------------- */
+/* Classe para esconder visualmente mas manter acessível para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Media Queries - Ajustes responsivos
+-------------------------------------------------- */
+@media (max-width: 520px) {
+    /* Empilha elementos em telas pequenas */
+    .search-inner { flex-direction: column; align-items: stretch; }
+    .filter-btn { width: 100%; }
+    .thumb { width: 100%; }
+    .price { margin-left: 0; }
+
+    /* Em telas pequenas, usar 1 coluna para os cards */
+    .cards-grid { grid-template-columns: 1fr; }
+}

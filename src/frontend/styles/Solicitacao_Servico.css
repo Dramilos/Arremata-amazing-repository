@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: #f8f6f3;
+  background-color: #fff9f3;
 }
 
 /* ===== CABEÇALHO ===== */
@@ -94,7 +94,7 @@ body {
 
 /* ===== FORMULÁRIO ===== */
 .formulario {
-  background-color: #fffaf0;
+  background-color: #ffffff;
   display: flex;
   gap: 50px;
   padding: 40px;

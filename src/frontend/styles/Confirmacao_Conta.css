@@ -30,15 +30,12 @@
         }
 
         /* Estilo para a logo Arremata (AJUSTADO) */
-        .logo-arremata {
-            font-size: 60px;
-            font-weight: bold;
-            color: #251109; /* A cor principal do texto agora é a cor da sombra */
-            margin-bottom: 20px;
-            /* Efeito de sombra que simula a profundidade na logo */
-            text-shadow: -6px 0px 0 var(--laranja-logo); /* <-- Esta é a linha chave alterada */
-            letter-spacing: 2px;
-}
+        
+        .logo img {
+            height: 100px; /* Defina uma altura fixa. 80px é um bom valor, similar à imagem de perfil. */
+            width: auto; /* Mantém a proporção da imagem automaticamente. */
+            max-height: 100%; /* Garante que a imagem não ultrapasse a altura do top-header */
+        }
 
         /* Estilo para a mensagem de conclusão */
         .message {

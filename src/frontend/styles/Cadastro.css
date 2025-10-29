@@ -47,7 +47,6 @@ body {
 
 .logo img {
   height: 80px; /* Defina uma altura fixa. 80px é um bom valor, similar à imagem de perfil. */
-  width: auto; /* Mantém a proporção da imagem automaticamente. */
   max-height: 100%; /* Garante que a imagem não ultrapasse a altura do top-header */
 }
 

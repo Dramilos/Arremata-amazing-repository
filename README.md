@@ -21,7 +21,7 @@ README.md → Explicação principal do projeto
 LICENSE → Licença do projeto
 
 ## Protótipo
-Link para o protótipo no Figma: https://www.figma.com/design/7p3aoBcWLjmU06fwKN9hy8/Prot%C3%B3tipo-0.2?m=auto&t=XhXVasBOpauRMwht-6
+Link para o protótipo no Figma: https://www.figma.com/design/MgUvQ0w7TKOikGcqjndBR6/Prot%C3%B3tipo-0.2?m=auto&t=HgPfcBD2V3wJQZkg-6
 ## Integrantes
 - JOAO VITOR ATORRE DE OLIVEIRA
 - LEONARDO DE MOURA GOMES MACHADO

@@ -34,16 +34,10 @@ body {
     opacity: 0.8;
     transition: opacity 0.2s;
 }
+
 .nav a:hover {
     opacity: 1;
 }
-
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
 
 .icon-img {
     width: 28px;
@@ -55,6 +49,28 @@ body {
     border: 2px solid #2c180f;
     transition: box-shadow 0.2s;
 }
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo img {
+  height: 80px; /* Defina uma altura fixa. 80px é um bom valor, similar à imagem de perfil. */
+  width: auto; /* Mantém a proporção da imagem automaticamente. */
+  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do top-header */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #ffcc3a;
+  background: #fff;
+  object-fit: cover;
+}
+
 .icon-img:hover {
     box-shadow: 0 0 0 2px #f9c22e;
 }
@@ -69,8 +85,15 @@ body {
     border: 2px solid #2c180f;
     transition: box-shadow 0.2s;
 }
+
 .icon-img-branca:hover {
     box-shadow: 0 0 0 2px #f9c22e;
+}
+
+#img-arremata {
+    margin-right: 24px;
+    width: 200px;
+    height: 70px;
 }
 
 .hero {

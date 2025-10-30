@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Arremata - O maior site de trabalhadores do Brasil</title>
+    <link rel="stylesheet" href="BASE.css">
+  </head>
+  <body>
+    <header class="header">
+            <a href="index.html">
+                <img src="./components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
+            </a>            
+        <nav class="nav">
+            <a href="#">Realize serviços</a>
+            <a href="#">Solicite um serviço</a>
+        </nav>
+        <div class="header-icons">
+            <a href="Carteira.html">
+                <img src="./components/Imagens/Carteira.png" alt="Menu" class="icon-img-branca" />
+            </a>
+            <a href="notificacoes.html">    
+                <img src="./components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
+            </a>
+            <a href="Usuário.html">
+                <img src="./components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
+            </a>
+        </div>
+    </header>
+    <main class="container">
+        <!-- Search and filters panel -->
+        <section class="search-panel" aria-label="Barra de pesquisa e filtros">
+            <div class="search-inner">
+                <div class="search-box">
+                    <input type="search" placeholder="Buscar serviços, categorias, profissionais..." aria-label="Pesquisar">
+                    <button class="search-btn" aria-label="Pesquisar">
+                        <span class="sr-only">Pesquisar</span>
+                        <img src="./components/Imagens/magnifying-glass.png" alt="Pesquisar" class="search-icon" />
+                    </button>
+                </div>
+                <div class="filter-btn" title="Filtros" aria-hidden="true">
+                    <div class="filter-btn" title="Filtros" aria-hidden="true" id="open-categorias-modal">
+                        <img src="./components/Imagens/Filtro.png" alt="Filtro" class="filter-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="chips" aria-hidden="true">
+                <div class="chips" id="chips-container" aria-hidden="true">
+                    <!-- Chips dinâmicos aqui -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards grid -->
+        <section class="cards-grid" aria-label="Resultados">
+            <article class="card">
+                <header class="card-header">
+                    <img src="./components/Imagens/Perfil_foto.png" alt="Avatar" class="avatar">
+                    <h3 class="card-title">Título</h3>
+                </header>
+                <div class="card-body">
+                    <div class="categories-price">
+                        <div class="categories">
+                            <span class="category">Limpeza</span>
+                        </div>
+                        <div class="price">
+                            <span class="price-label">Preço inicial:</span>
+                            <span class="price-value">150$</span>
+                        </div>
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumb">▶</div>
+                        <div class="thumb">▶</div>
+                    </div>
+                    <div class="description">
+                        <strong>Descrição:</strong>
+                        <p>Breve descrição do serviço apresentado em poucas linhas.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="best-offer">Melhor Oferta: (...)</span>
+                        <button class="more-btn">
+                            Ver mais
+                            <img src="./components/Imagens/Seta.png" alt="" class="more-icon" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card">
+                <header class="card-header">
+                    <img src="./components/Imagens/Perfil_foto.png" alt="Avatar" class="avatar">
+                    <h3 class="card-title">Título</h3>
+                </header>
+                <div class="card-body">
+                    <div class="categories-price">
+                        <div class="categories">
+                            <span class="category">Mecânica</span>
+                        </div>
+                        <div class="price">
+                            <span class="price-label">Preço inicial:</span>
+                            <span class="price-value">180$</span>
+                        </div>
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumb">▶</div>
+                        <div class="thumb">▶</div>
+                    </div>
+                    <div class="description">
+                        <strong>Descrição:</strong>
+                        <p>Serviços relacionados à mecânica e manutenção.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="best-offer">Melhor Oferta: (...)</span>
+                        <button class="more-btn">
+                            Ver mais
+                            <img src="./components/Imagens/Seta.png" alt="" class="more-icon" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card card-alt">
+                <header class="card-header">
+                    <img src="./components/Imagens/Perfil_foto.png" alt="Avatar" class="avatar">
+                    <h3 class="card-title">Título</h3>
+                </header>
+                <div class="card-body">
+                    <div class="categories-price">
+                        <div class="categories">
+                            <span class="category">Carpintaria</span>
+                            <span class="category">Pintura</span>
+                        </div>
+                        <div class="price">
+                            <span class="price-label">Preço inicial:</span>
+                            <span class="price-value">340$</span>
+                        </div>
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumb">▶</div>
+                        <div class="thumb">▶</div>
+                    </div>
+                    <div class="description">
+                        <strong>Descrição:</strong>
+                        <p>Trabalhos de carpintaria e pintura para pequenos e médios reparos.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="best-offer">Melhor Oferta: (...)</span>
+                        <button class="more-btn">
+                            Ver mais
+                            <img src="./components/Imagens/Seta.png" alt="" class="more-icon" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card card-alt">
+                <header class="card-header">
+                    <img src="./components/Imagens/Perfil_foto.png" alt="Avatar" class="avatar">
+                    <h3 class="card-title">Título</h3>
+                </header>
+                <div class="card-body">
+                    <div class="categories-price">
+                        <div class="categories">
+                            <span class="category">Encanamento</span>
+                        </div>
+                        <div class="price">
+                            <span class="price-label">Preço inicial:</span>
+                            <span class="price-value">200$</span>
+                        </div>
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumb">▶</div>
+                        <div class="thumb">▶</div>
+                    </div>
+                    <div class="description">
+                        <strong>Descrição:</strong>
+                        <p>Breve descrição do serviço apresentado em poucas linhas.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="best-offer">Melhor Oferta: (...)</span>
+                        <button class="more-btn">
+                            Ver mais
+                            <img src="./components/Imagens/Seta.png" alt="" class="more-icon" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card">
+                <header class="card-header">
+                    <img src="./components/Imagens/Perfil_foto.png" alt="Avatar" class="avatar">
+                    <h3 class="card-title">Título</h3>
+                </header>
+                <div class="card-body">
+                    <div class="categories-price">
+                        <div class="categories">
+                            <span class="category">Carpintaria</span>
+                        </div>
+                        <div class="price">
+                            <span class="price-label">Preço inicial:</span>
+                            <span class="price-value">120$</span>
+                        </div>
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumb">▶</div>
+                        <div class="thumb">▶</div>
+                    </div>
+                    <div class="description">
+                        <strong>Descrição:</strong>
+                        <p>Breve descrição do serviço apresentado em poucas linhas.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="best-offer">Melhor Oferta: (...)</span>
+                        <button class="more-btn">
+                            Ver mais
+                            <img src="./components/Imagens/Seta.png" alt="" class="more-icon" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card card-alt">
+                <header class="card-header">
+                    <img src="./components/Imagens/Perfil_foto.png" alt="Avatar" class="avatar">
+                    <h3 class="card-title">Título</h3>
+                </header>
+                <div class="card-body">
+                    <div class="categories-price">
+                        <div class="categories">
+                            <span class="category">Elétrica</span>
+                        </div>
+                        <div class="price">
+                            <span class="price-label">Preço inicial:</span>
+                            <span class="price-value">250$</span>
+                        </div>
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumb">▶</div>
+                        <div class="thumb">▶</div>
+                    </div>
+                    <div class="description">
+                        <strong>Descrição:</strong>
+                        <p>Breve descrição do serviço apresentado em poucas linhas.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="best-offer">Melhor Oferta: (...)</span>
+                        <button class="more-btn">
+                            Ver mais
+                            <img src="./components/Imagens/Seta.png" alt="" class="more-icon" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- Modal de categorias (movido para fim do body para overlay full-screen) -->
+    <div id="categorias-modal" class="categorias-modal" hidden>
+        <div class="categorias-modal-content" role="dialog" aria-modal="true" aria-labelledby="categorias-title">
+            <button class="categorias-modal-close" id="close-categorias-modal" aria-label="Fechar">&#10005;</button>
+            <h2 id="categorias-title">Categorias:</h2>
+            <div class="categorias-list">
+                <div class="categorias-row">
+                    <button class="categoria-btn" data-categoria="Elétrica">Elétrica</button>
+                    <button class="categoria-btn" data-categoria="Limpeza">Limpeza</button>
+                    <button class="categoria-btn" data-categoria="Encanamento">Encanamento</button>
+                </div>
+                <div class="categorias-row">
+                    <button class="categoria-btn" data-categoria="Pintura">Pintura</button>
+                    <button class="categoria-btn" data-categoria="Mecânica">Mecânica</button>
+                    <button class="categoria-btn" data-categoria="Carpintaria">Carpintaria</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="categorias.js"></script>
+  </body>
+</html>

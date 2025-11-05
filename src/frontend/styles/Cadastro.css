@@ -164,22 +164,11 @@ input[type=checkbox] {
   margin-top: 32px;
 }
 
-.btn-back {
-  background: none;
-  border: none;
-  color: #2d180c;
-  font-size: 1.1rem;
-  cursor: pointer;
-  text-decoration: underline;
-  padding: 0 16px 0 0;
-  transition: color 0.2s;
-}
-
-.btn-back:hover {
+.btn:hover {
   color: #ffcc3a;
 }
 
-.btn-next {
+.btn {
   background: #fff;
   color: #2d180c;
   border: 2px solid #2d180c;
@@ -191,14 +180,19 @@ input[type=checkbox] {
   transition: background 0.2s, color 0.2s;
 }
 
-.btn-next:disabled {
+.btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.btn-next:hover:enabled {
+.btn:hover:enabled {
   background: #ffcc3a;
   color: #2d180c;
+}
+
+a {
+  text-decoration: none;
+  color: #2c180c;
 }
 
 .error-message {

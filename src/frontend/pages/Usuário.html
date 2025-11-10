@@ -1,31 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <title>Arremata - O maior site de trabalhadores do Brasil</title>
-    <link rel="stylesheet" href="../styles/usuario.css">
-  </head>
-  <header class="header">
-            <a href="../index.html">
-                <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
-            </a>            
-        <nav class="nav">
-            <a href="./servicos.html">Realize serviços</a>
-            <a href="./Solicitacao_Servico.html">Solicite um serviço</a>
-        </nav>
-        <div class="header-icons">
-            <a href="Carteira.html">
-                <img src="../components/Imagens/Carteira.png" alt="Menu" class="icon-img-branca" />
-            </a>
-            <a href="notificacoes.html">    
-                <img src="../components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
-            </a>
-            <a href="Usuário.html">
-                <img src="../components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
-            </a>
-        </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfil - Arremata</title>
+  <link rel="stylesheet" href="../styles/Perfil_Prestador.css">
+</head>
 <body>
-    
+  <header class="header">
+      <a href="index.html">
+          <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
+      </a>            
+      <nav class="nav">
+          <a href="./servicos.html">Realize serviços</a>
+          <a href="./Solicitacao_Servico.html">Solicite um serviço</a>
+      </nav>
+      <div class="header-icons">
+          <a href="Carteira.html">
+              <img src="../components/Imagens/Carteira.png" alt="Menu" class="icon-img-branca" />
+          </a>
+          <a href="notificacoes.html">    
+              <img src="../components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
+          </a>
+          <a href="Usuário.html">
+              <img src="../components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
+          </a>
+      </div>
+  </header>
+  <!-- Conteúdo principal -->
+  <main class="container">
+
+    <!-- Seção de perfil -->
+    <section class="profile-info card">
+      <div class="profile-left">
+        <!-- IMAGEM DE PERFIL -->
+        <img id="profileImg" src="../components/Imagens/Perfil_foto.png" alt="Foto de perfil" class="profile-img">
+
+        <!-- INPUT DE ARQUIVO OCULTO -->
+        <input type="file" id="uploadImg" accept="image/*" style="display:none;">
+
+        <!-- BOTÃO PARA TROCAR FOTO -->
+        <button id="editBtn" class="edit-btn">✏️</button>
+      </div>
+
+      <div class="profile-right">
+        <div class="input-group">
+          <label>Nome</label>
+          <input type="text" class="editable" value="Tadeu Fagundes da Costa" readonly>
+        </div>
+
+        <div class="input-group">
+          <label>RG</label>
+          <input type="text" class="editable" value="98.235.572-06" readonly>
+        </div>
+
+        <div class="input-group">
+          <label>Telefone</label>
+          <input type="text" class="editable" value="19 4002-8922" readonly>
+        </div>
+
+        <div class="rating" id="rating">
+          ★★★★★
+        </div>
+
+        <div class="input-group">
+          <label>Breve descrição sobre você:</label>
+          <textarea class="editable" readonly>Gosto de brincar e andar de bicicleta</textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avaliações -->
+    <section class="reviews card">
+      <h3>Análises passadas</h3>
+
+      <div class="review">
+        <div class="client">
+          <img src="../components/Imagens/Perfil_foto.png" alt="">
+          <span>Tadeu F.</span>
+          <span>Para: Joaquim dos Santos</span>
+        </div>
+        <div class="stars" data-rating="5">★★★★★</div>
+        <p>Muito profissional e rápido! Lindo</p>
+      </div>
+
+      <div class="review">
+        <div class="client">
+          <img src="../components/Imagens/Perfil_foto.png" alt="">
+          <span>Tadeu F.</span>
+          <span>Para: Maral Amaral</span>
+        </div>
+        <div class="stars" data-rating="2">★★</div>
+        <p>Quebrou minha pia</p>
+      </div>
+    </section>
+
+        <!-- SERVIÇOS EM ANDAMENTO -->
+    <section class="portfolio card">
+      <h3>Portfólio</h3>
+      <div class="portfolio-item">
+        <div class="thumb">🎥</div>
+        <div class="details">
+          <p><strong>Trabalho 01</strong></p>
+          <p>Instalação elétrica residencial</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../scripts/Perfil_Prestador.js"></script>
 </body>
 </html>

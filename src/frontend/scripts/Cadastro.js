@@ -1,7 +1,11 @@
 // Aguarda o carregamento total do DOM
 document.addEventListener("DOMContentLoaded", function () {
+
+  //limpa antigo localstorage
+  localStorage.clear();
+
   // ------------------------------
-  // ETAPA 1 – CAMPO NOME (espelho e contador)
+  //CAMPO NOME (espelho e contador)
   // ------------------------------
   const nomeInput = document.getElementById("nome");
   const form = document.getElementById("Formulário");
@@ -121,8 +125,7 @@ function validarEmailDinamico() {
     msgEmail.textContent = "E-mail válido.";
     msgEmail.style.color = "green";
     msgEmail.style.display = "block";   // mostrar como mensagem de sucesso
-    // ou, se preferir, você pode ocultar a mensagem e só mostrar quando houver erro
-    // msgEmail.style.display = "none";
+    
   }
 }
 
@@ -174,12 +177,14 @@ const formulario = document.getElementById("Formulario");
 
     const Snome = document.getElementById("nome").value;
     const Semail = document.getElementById("email").value;
+    const Srg = document.getElementById("rg").value;
     const Sestado = document.getElementById("estado").value;
     const Scidade = document.getElementById("cidade").value;
     const Stelefone = document.getElementById("telefone").value;
     const Ssenha = document.getElementById("senha").value;
 
     if  ( Snome === "" ||
+          Srg === "" ||
           Semail === "" ||
           Sestado === "" ||
           Scidade === "" ||
@@ -188,16 +193,36 @@ const formulario = document.getElementById("Formulario");
       alert("Por favor, preencha todos os campos obrigatórios.");
       return; // Sai da função se algum campo estiver vazio
     }
+
+    
+  // --------------------
+  // SALVA DADOS NO LOCALSTORAGE
+  // --------------------
+   const token = "abc123"; // Exemplo de token
+  localStorage.setItem("Token", token);
+  localStorage.setItem("Usuario", Snome);
+  localStorage.setItem("RG", Srg)
+  localStorage.setItem("Email", Semail);
+  localStorage.setItem("Estado", Sestado);
+  localStorage.setItem("Cidade", Scidade);
+  localStorage.setItem("Telefone", Stelefone);
+
+    
     
     // Se tudo estiver ok, pode enviar o formulário
     //formulario.submit(); isso ta comentado porque senao nao redireciona mas se der bosta tirem
-    window.location.href = "./Usuário.html";
+    
+    window.location.href = "../pages/Usuário.html";
     
 
 
 
 
   });
+
+  
+  
+
 
 });
 

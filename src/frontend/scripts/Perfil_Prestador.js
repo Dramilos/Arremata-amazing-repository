@@ -1,7 +1,10 @@
+
+/*
 // ===== Habilitar edição de campos =====
 const editables = document.querySelectorAll('.editable');
 let editing = false;
-
+*/
+/*
 // ===== Sistema de estrelas =====
 const rating = document.getElementById('rating');
 rating.addEventListener('click', (e) => {
@@ -10,7 +13,7 @@ rating.addEventListener('click', (e) => {
   const starWidth = rect.width / 5;
   const selected = Math.ceil(clickX / starWidth);
   rating.textContent = "★★★★★".slice(0, selected) + "☆☆☆☆☆".slice(selected, 5);
-});
+});*/
 
 // ===== Upload e troca de imagem de perfil =====
 const profileImg = document.getElementById('profileImg');
@@ -32,4 +35,27 @@ uploadImg.addEventListener('change', (event) => {
     };
     reader.readAsDataURL(file);
   }
+});
+
+
+// ------------------------------
+// PEGA INFORMAÇÕES DO LOCAL STORAGE
+// ------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const nome = localStorage.getItem("Usuario");
+  const rg = localStorage.getItem("RG");
+  const telefone = localStorage.getItem("Telefone");
+// ------------------------------
+  document.getElementById("Nome").textContent = nome || "";
+  document.getElementById("RG").textContent = rg || "";
+  document.getElementById("Telefone").textContent = telefone || "";
+});
+
+// ------------------------------
+// LOGOUT E LIMPA LOCALSTORAGE
+// ------------------------------
+const logoutBtn = document.getElementById("logout");
+logoutBtn.addEventListener("click", () => {
+  localStorage.clear(); // Limpa todos os dados do localStorage
+  window.location.href = "../pages/Cadastro.html"; // Redireciona para a página de login
 });

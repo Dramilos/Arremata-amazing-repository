@@ -182,6 +182,7 @@ const formulario = document.getElementById("Formulario");
     const Scidade = document.getElementById("cidade").value;
     const Stelefone = document.getElementById("telefone").value;
     const Ssenha = document.getElementById("senha").value;
+    const Stermo = document.getElementById("termo");
 
     if  ( Snome === "" ||
           Srg === "" ||
@@ -189,7 +190,8 @@ const formulario = document.getElementById("Formulario");
           Sestado === "" ||
           Scidade === "" ||
           Stelefone === "" ||
-          Ssenha.value === "" ) {
+          Ssenha.value === ""
+                ) {
       alert("Por favor, preencha todos os campos obrigatórios.");
       return; // Sai da função se algum campo estiver vazio
     }

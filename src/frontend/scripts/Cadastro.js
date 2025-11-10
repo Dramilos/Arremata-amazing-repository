@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
   nomeInput.addEventListener("input", function () {
   const texto = nomeInput.value;
   const comprimento = texto.length;
-  nomeEspelho.textContent = `Você digitou: ${texto}`;
   contador.textContent = `Caracteres: ${comprimento}/50`;
 
   if (comprimento > 50) {
@@ -167,9 +166,9 @@ inputEmail.addEventListener("blur", validarEmailDinamico);
   //  VALIDAÇÃO COMPLETA E ENVIO
   // ------------------------------
   
-const formulario = document.getElementById("Formulário");
+const formulario = document.getElementById("Formulario");
 
-  form.addEventListener("submit", function (event) {
+  formulario.addEventListener("submit", function (event) {
     event.preventDefault(); // Evita o envio padrão
 
 
@@ -180,20 +179,19 @@ const formulario = document.getElementById("Formulário");
     const Stelefone = document.getElementById("telefone").value;
     const Ssenha = document.getElementById("senha").value;
 
-    if ( Snome.valu === "" ||
-          Semail.value === "" ||
-          Sestado.value === "" ||
-          Scidade.value === "" ||
-          Stelefone.value === "" ||
+    if  ( Snome === "" ||
+          Semail === "" ||
+          Sestado === "" ||
+          Scidade === "" ||
+          Stelefone === "" ||
           Ssenha.value === "" ) {
       alert("Por favor, preencha todos os campos obrigatórios.");
       return; // Sai da função se algum campo estiver vazio
     }
     
     // Se tudo estiver ok, pode enviar o formulário
-    formulario.submit();
-
-
+    //formulario.submit(); isso ta comentado porque senao nao redireciona mas se der bosta tirem
+    window.location.href = "./Usuário.html";
     
 
 

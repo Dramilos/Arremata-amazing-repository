@@ -100,29 +100,20 @@
 /* Reset e configurações globais
 -------------------------------------------------- */
 body {
-    display: grid;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fff9f3; /* Fundo coral claro */
-    color: #23160f; /* Texto marrom escuro */
+  font-family: Arial, sans-serif;
+  background: #faf6ea;
+  margin: 0;
+  padding: 0;
 }
-
-/* Header principal
--------------------------------------------------- */
+/* Ajustes do header de cima */
 .header {
-    background: #2c180f;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    height: 56px;
-    justify-content: space-between;
-}
-
-#img-arremata {
-    margin-right: 24px;
-    width: 200px;
-    height: 70px;
+  background: #2d180c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 1.5rem 2px 1.5rem;
+  /* CIMA DIREITA BAIXO ESQUERDA */
 }
 
 .nav a {
@@ -138,12 +129,6 @@ body {
     opacity: 1;
 }
 
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
 .icon-img {
     width: 28px;
     height: 28px;
@@ -153,6 +138,27 @@ body {
     background: #fff;
     border: 2px solid #2c180f;
     transition: box-shadow 0.2s;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo img {
+  height: 80px; /* Defina uma altura fixa. 80px é um bom valor, similar à imagem de perfil. */
+  width: auto; /* Mantém a proporção da imagem automaticamente. */
+  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do top-header */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #ffcc3a;
+  background: #fff;
+  object-fit: cover;
 }
 
 .icon-img:hover {
@@ -171,7 +177,13 @@ body {
 }
 
 .icon-img-branca:hover {
-    box-shadow: 0 0 0 2px #f9c22e; /* Borda amarela no hover */
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+#img-arremata {
+    margin-right: 24px;
+    width: 200px;
+    height: 70px;
 }
 
 /* Layout principal da página

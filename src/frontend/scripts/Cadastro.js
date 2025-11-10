@@ -1,7 +1,11 @@
 // Aguarda o carregamento total do DOM
 document.addEventListener("DOMContentLoaded", function () {
+
+  //limpa antigo localstorage
+  localStorage.clear();
+
   // ------------------------------
-  // ETAPA 1 – CAMPO NOME (espelho e contador)
+  //CAMPO NOME (espelho e contador)
   // ------------------------------
   const nomeInput = document.getElementById("nome");
   const form = document.getElementById("Formulário");
@@ -22,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
   nomeInput.addEventListener("input", function () {
   const texto = nomeInput.value;
   const comprimento = texto.length;
-  nomeEspelho.textContent = `Você digitou: ${texto}`;
   contador.textContent = `Caracteres: ${comprimento}/50`;
 
   if (comprimento > 50) {
@@ -122,8 +125,7 @@ function validarEmailDinamico() {
     msgEmail.textContent = "E-mail válido.";
     msgEmail.style.color = "green";
     msgEmail.style.display = "block";   // mostrar como mensagem de sucesso
-    // ou, se preferir, você pode ocultar a mensagem e só mostrar quando houver erro
-    // msgEmail.style.display = "none";
+    
   }
 }
 
@@ -167,39 +169,62 @@ inputEmail.addEventListener("blur", validarEmailDinamico);
   //  VALIDAÇÃO COMPLETA E ENVIO
   // ------------------------------
   
-const formulario = document.getElementById("Formulário");
+const formulario = document.getElementById("Formulario");
 
-  form.addEventListener("submit", function (event) {
+  formulario.addEventListener("submit", function (event) {
     event.preventDefault(); // Evita o envio padrão
 
 
     const Snome = document.getElementById("nome").value;
     const Semail = document.getElementById("email").value;
+    const Srg = document.getElementById("rg").value;
     const Sestado = document.getElementById("estado").value;
     const Scidade = document.getElementById("cidade").value;
     const Stelefone = document.getElementById("telefone").value;
     const Ssenha = document.getElementById("senha").value;
+    const Stermo = document.getElementById("termo");
 
-    if ( Snome.valu === "" ||
-          Semail.value === "" ||
-          Sestado.value === "" ||
-          Scidade.value === "" ||
-          Stelefone.value === "" ||
-          Ssenha.value === "" ) {
+    if  ( Snome === "" ||
+          Srg === "" ||
+          Semail === "" ||
+          Sestado === "" ||
+          Scidade === "" ||
+          Stelefone === "" ||
+          Ssenha.value === ""
+                ) {
       alert("Por favor, preencha todos os campos obrigatórios.");
       return; // Sai da função se algum campo estiver vazio
     }
+
+    
+  // --------------------
+  // SALVA DADOS NO LOCALSTORAGE
+  // --------------------
+   const token = "abc123"; // Exemplo de token
+  localStorage.setItem("Token", token);
+  localStorage.setItem("Usuario", Snome);
+  localStorage.setItem("RG", Srg)
+  localStorage.setItem("Email", Semail);
+  localStorage.setItem("Estado", Sestado);
+  localStorage.setItem("Cidade", Scidade);
+  localStorage.setItem("Telefone", Stelefone);
+
+    
     
     // Se tudo estiver ok, pode enviar o formulário
-    formulario.submit();
-
-
+    //formulario.submit(); isso ta comentado porque senao nao redireciona mas se der bosta tirem
+    
+    window.location.href = "../pages/Usuário.html";
     
 
 
 
 
   });
+
+  
+  
+
 
 });
 

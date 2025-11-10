@@ -2,25 +2,30 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil - Arremata</title>
-  <link rel="stylesheet" href="../styles/Perfil_Prestador.css" />
+  <link rel="stylesheet" href="../styles/Perfil_Prestador.css">
 </head>
 <body>
-
-  <!-- Cabeçalho -->
   <header class="header">
-    <div class="logo">ARREMATA</div>
-    <nav>
-      <a href="#">Realize serviços</a>
-      <a href="#">Solicite um serviço</a>
-    </nav>
-    <div class="icons">
-      <i class="bell">🔔</i>
-      <i class="user">👤</i>
-    </div>
+      <a href="index.html">
+          <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
+      </a>            
+      <nav class="nav">
+          <a href="./servicos.html">Realize serviços</a>
+          <a href="./Solicitacao_Servico.html">Solicite um serviço</a>
+      </nav>
+      <div class="header-icons">
+          <a href="Carteira.html">
+              <img src="../components/Imagens/Carteira.png" alt="Menu" class="icon-img-branca" />
+          </a>
+          <a href="notificacoes.html">    
+              <img src="../components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
+          </a>
+          <a href="Usuário.html">
+              <img src="../components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
+          </a>
+      </div>
   </header>
-
   <!-- Conteúdo principal -->
   <main class="container">
 
@@ -28,29 +33,33 @@
     <section class="profile-info card">
       <div class="profile-left">
         <!-- IMAGEM DE PERFIL -->
-        <img id="profileImg" src="img/minha-foto.jpg" alt="Foto de perfil" class="profile-img">
+        <img id="profileImg" src="../components/Imagens/Perfil_foto.png" alt="Foto de perfil" class="profile-img">
 
         <!-- INPUT DE ARQUIVO OCULTO -->
         <input type="file" id="uploadImg" accept="image/*" style="display:none;">
 
         <!-- BOTÃO PARA TROCAR FOTO -->
         <button id="editBtn" class="edit-btn">✏️</button>
+
+        <!--BOTAO DE LOGOUT-->
+        <button id = "logout" ><a href="#">Logout</a></button> 
+
       </div>
 
       <div class="profile-right">
         <div class="input-group">
           <label>Nome</label>
-          <input type="text" class="editable" value="Nome prestador" readonly>
+          <p id = "Nome"></p>
         </div>
 
         <div class="input-group">
           <label>RG</label>
-          <input type="text" class="editable" value="98.235.572-06" readonly>
+          <p id = "RG"></p>
         </div>
 
         <div class="input-group">
           <label>Telefone</label>
-          <input type="text" class="editable" value="11 97351-0127" readonly>
+          <p id = "Telefone"></p>
         </div>
 
         <div class="rating" id="rating">

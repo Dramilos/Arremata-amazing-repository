@@ -1,1 +1,0 @@
-Telas HTML separadas (login.html, dashboard.html)

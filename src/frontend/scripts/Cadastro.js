@@ -222,11 +222,53 @@ const formulario = document.getElementById("Formulario");
 
   });
 
-  
-  
+  // ------------------------------
+  // FORMATAÇÃO DE RG
+  // ------------------------------
+  const rgInput = document.getElementById("rg");
 
+  rgInput.addEventListener("input", function (e) {
+    let valor = e.target.value.replace(/\D/g, ""); // Remove tudo que não é número
+
+    if (valor.length > 0) {
+      // Formata: xx.xxx.xxx-x
+      if (valor.length <= 2) {
+        valor = valor;
+      } else if (valor.length <= 5) {
+        valor = valor.slice(0, 2) + "." + valor.slice(2);
+      } else if (valor.length <= 8) {
+        valor = valor.slice(0, 2) + "." + valor.slice(2, 5) + "." + valor.slice(5);
+      } else {
+        valor = valor.slice(0, 2) + "." + valor.slice(2, 5) + "." + valor.slice(5, 8) + "-" + valor.slice(8, 9);
+      }
+    }
+
+    e.target.value = valor;
+  });
+
+  // ------------------------------
+  // FORMATAÇÃO DE TELEFONE
+  // ------------------------------
+  const telefoneInput = document.getElementById("telefone");
+
+  telefoneInput.addEventListener("input", function (e) {
+    let valor = e.target.value.replace(/\D/g, ""); // Remove tudo que não é número
+
+    if (valor.length > 0) {
+      // Formata: (xx) xxxxx-xxxx
+      if (valor.length <= 2) {
+        valor = "(" + valor;
+      } else if (valor.length <= 7) {
+        valor = "(" + valor.slice(0, 2) + ") " + valor.slice(2);
+      } else {
+        valor = "(" + valor.slice(0, 2) + ") " + valor.slice(2, 7) + "-" + valor.slice(7, 11);
+      }
+    }
+
+    e.target.value = valor;
+  });
 
 });
 
-  
+
 

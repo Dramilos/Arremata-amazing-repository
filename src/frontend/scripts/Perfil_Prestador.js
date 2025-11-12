@@ -45,7 +45,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const nome = localStorage.getItem("Usuario");
   const rg = localStorage.getItem("RG");
   const telefone = localStorage.getItem("Telefone");
+  const token = localStorage.getItem("Token");
 // ------------------------------
+// VERIFICA SE ESTA LOGADO
+if (!token) {
+    alert("Você precisa estar logado para acessar esta página.");
+    window.location.href = "../pages/Cadastro.html";
+    return;
+  }
+
+
+
+// ------------------------------
+// EXIBE INFORMAÇÕES NA PÁGINA
   document.getElementById("Nome").textContent = nome || "";
   document.getElementById("RG").textContent = rg || "";
   document.getElementById("Telefone").textContent = telefone || "";

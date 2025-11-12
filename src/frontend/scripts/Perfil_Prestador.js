@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ------------------------------
 // VERIFICA SE ESTA LOGADO
 if (!token) {
+    alert("Você precisa estar logado para acessar esta página.");
     window.location.href = "../pages/Cadastro.html";
     return;
   }

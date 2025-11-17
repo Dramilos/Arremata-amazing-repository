@@ -3,8 +3,11 @@
 // PEGA INFORMAÇÕES DO LOCAL STORAGE
 // ------------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  
+  const telefone = localStorage.getItem("Telefone");
+  const email = localStorage.getItem("Email");
   const token = localStorage.getItem("Token");
+  const estado = localStorage.getItem("Estado");
+  const cidade = localStorage.getItem("Cidade");
 // ------------------------------
 // VERIFICA SE ESTA LOGADO
 if (!token) {
@@ -12,6 +15,14 @@ if (!token) {
     window.location.href = "../pages/Cadastro.html";
     return;
   }
+
+// ------------------------------
+// EXIBE INFORMAÇÕES NA PÁGINA
+
+document.getElementById("Telefone").textContent = telefone || "";
+document.getElementById("Email").textContent = email || "";
+document.getElementById("Estado").textContent = estado || "";
+document.getElementById("Cidade").textContent = cidade || "";
 });
 // ==============================
 // SISTEMA DE TAGS DINÂMICO

@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const urlCidades = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${sigla}/municipios`;
       try {
         const resp = await fetch(urlCidades);
-        const cidades = await resp.json();
+        const cidades = await resp.json();  
         // Ordenar pelo nome da cidade
         cidades.sort((a, b) => a.nome.localeCompare(b.nome));
         for (let cid of cidades) {

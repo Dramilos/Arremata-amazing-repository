@@ -1,3 +1,17 @@
+// ------------------------------
+// PEGA INFORMAÇÕES DO LOCAL STORAGE
+// ------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const token = localStorage.getItem("Token");
+// ------------------------------
+// VERIFICA SE ESTA LOGADO
+if (!token) {
+    alert("Você precisa estar logado para acessar esta página.");
+    window.location.href = "../pages/Cadastro.html";
+    return;
+  }
+});
+
 // categorias.js
 // Controla o modal de categorias, seleção de tags e chips dinâmicos
 

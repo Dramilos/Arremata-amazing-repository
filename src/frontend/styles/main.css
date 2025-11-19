@@ -102,8 +102,7 @@ body {
     min-height: 260px;
 }
 .hero-info {
-    width: 60%;
-    padding: 32px 32px 0 32px;
+    padding: 0px 32px 0 32px;
     background: #f9f6f2;
     display: flex;
     flex-direction: column;
@@ -111,7 +110,7 @@ body {
 }
 .hero-info h1 {
     font-family: 'Russo One', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #23160f;
     margin-bottom: 16px;
 }
@@ -126,10 +125,11 @@ body {
 }
 
 .banner {
-    background: linear-gradient(90deg, #f9c22e 60%, #ffdb7c 100%);
+    background: linear-gradient(90deg, #f9c22e 60%, #ffe395 100%);
     text-align: center;
-    padding: 18px 0;
+    padding: 24px;
 }
+
 .banner h2 {
     font-family: 'Russo One', Arial, sans-serif;
     font-size: 2.2rem;
@@ -145,6 +145,13 @@ body {
     background: #fff;
     padding: 32px 32px 32px 32px;
 }
+
+.button {
+    border: none;
+    color:#f9f6f2;
+    border-radius: 10px;
+}
+
 .leia-mais-text {
     flex: 2;
     font-size: 1.2rem;
@@ -159,24 +166,37 @@ body {
     align-self: flex-end;
 }
 
-.container {
-    background-color:#f8bd1b;
-    border-radius: 10px;
-    font-weight: bolder;
-    font-size: 2.2rem;
-    color:#fff;
-    min-width: 20rem;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .botoes {
     display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    gap: 3rem;
+    gap: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.botao {
+    border: none;
+    border-radius: 10px;
+    background-color: #f9c22e;
+    padding: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color:#f9f6f2;
+
+    transition: padding 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao:hover {
+    padding: 3.2rem;
+    background-color: #f79d16;
+}
+
+.botao:nth-child(2):hover {
+    padding: 3.2rem;
+    background-color: #f05c2f;
 }
 
 .footer {

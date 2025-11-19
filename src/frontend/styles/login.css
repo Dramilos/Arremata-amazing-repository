@@ -12,10 +12,91 @@ html, body {
 body {
   margin: 0; /* remove margem padrão do navegador */
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* fonte segura e moderna */
-  background: #fcfaf4; /* fundo escuro para bom contraste */
+  background: #ffe69a; /* fundo escuro para bom contraste */
   color: #251109;      /* texto claro para legibilidade */
   line-height: 1.5;    /* altura de linha confortável */
 }
+
+/* Ajustes do header de cima */
+.header {
+  background: #2d180c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 1.5rem 2px 1.5rem;
+  /* CIMA DIREITA BAIXO ESQUERDA */
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+.icon-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #fff;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo img {
+  height: 80px; /* Defina uma altura fixa. 80px é um bom valor, similar à imagem de perfil. */
+  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do top-header */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #ffcc3a;
+  background: #fff;
+  object-fit: cover;
+}
+
+.icon-img:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+.icon-img-branca {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    background: #2c180f;
+    border: 2px solid #2c180f;
+    transition: box-shadow 0.2s;
+}
+
+.icon-img-branca:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+#img-arremata {
+    margin-right: 24px;
+    width: 200px;
+    height: 70px;
+}
+
 
 /* Container central: usa grid para centralizar vertical/horizontal */
 .container {
@@ -75,15 +156,6 @@ input:focus, textarea:focus {
   border-color: #4b74ff;                       /* cor principal no foco */
   box-shadow: 0 0 0 3px rgba(75,116,255,0.25); /* anel de foco suave */
 }
-
-/* Área para mensagens (erros/avisos) logo abaixo do formulário */
-.msg {
-  min-height: 1.2rem;  /* reserva espaço mesmo sem mensagem para evitar “pulos” */
-  margin-top: 0.25rem; /* pequeno espaçamento do campo acima */
-  font-size: 0.95rem;  /* tamanho de texto padrão */
-  color: #a9b5d1;      /* cor neutra */
-}
-.msg.error { color: #ff9494; } /* erro em vermelho claro visível no tema escuro */
 
 /* Botões “primários” e links estilizados como botão */
 button, .link-btn {

@@ -8,6 +8,26 @@
 </head>
 <body>
 
+  <header class="header">
+      <a href="../index.html">
+          <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
+      </a>            
+      <nav class="nav">
+          <a href="./servicos.html">Realize serviços</a>
+          <a href="./Solicitacao_Servico.html">Solicite um serviço</a>
+      </nav>
+      <div class="header-icons">
+          <a href="../pages/Carteira.html">
+              <img src="../components/Imagens/Carteira.png" alt="Menu" class="icon-img-branca" />
+          </a>
+          <a href="#">    
+              <img src="../components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
+          </a>
+          <a href="../pages/Selecao_Conta.html">
+              <img src="../components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
+          </a>
+      </div>
+  </header>
 
 
   
@@ -17,54 +37,20 @@
 
       <form id="login-form">
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required/>
-        <p id = "mensagemEmail" class="error-message" ></p>
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Email ou RG" required/>
 
         <label for="senha">Senha</label>
         <input id="senha" name="senha" type="password" required />
 
         <button type="submit">Entrar</button>
 
-        <p id="msg" class="msg" aria-live="polite"></p>
+        <div id="msg-cadastro" class="msg-cadastro">
+          <p>Não tem cadastro? <a href="../pages/Cadastro.html" class="register-link">Crie sua conta</a></p>
+        </div>
       </form>
     </section>
   </main>
-
-  <script>
-
- // ------------------------------
-  // EMAIL – VALIDAÇÃO E MENSAGEM DE ERRO
-  // ------------------------------
-     // Efeio blur no campo de email
-  const inputEmail = document.getElementById("email");
-const msgEmail = document.getElementById("mensagemEmail");
-
-// Função para validar email e exibir mensagem
-function validarEmailDinamico() {
-  const email = inputEmail.value.trim();
-  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (email === "") {
-    msgEmail.textContent = "O e-mail é obrigatório.";
-    msgEmail.style.color = "red";
-    msgEmail.style.display = "block";   // mostrar
-  } else if (!regexEmail.test(email)) {
-    msgEmail.textContent = "Por favor, insira um e-mail válido.";
-    msgEmail.style.color = "red";
-    msgEmail.style.display = "block";   // mostrar
-  } else {
-    msgEmail.textContent = "E-mail válido.";
-    msgEmail.style.color = "green";
-    msgEmail.style.display = "block";   // mostrar como mensagem de sucesso
-    
-  }
-}
-
-
-
-
-  </script>
 
 </body>
 </html>

@@ -11,17 +11,17 @@
         <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
     </a>            
         <nav class="nav">
-            <a href="./servicos.html">Realize serviços</a>
-            <a href="./Solicitacao_Servico.html">Solicite um serviço</a>
+            <a href="../pages/servicos.html">Realize serviços</a>
+            <a href="../pages/Solicitacao_Servico.html">Solicite um serviço</a>
         </nav>
         <div class="header-icons">
-            <a href="Carteira.html">
+            <a href="../pages/Carteira.html">
                 <img src="../components/Imagens/Carteira.png" alt="Menu" class="icon-img-branca" />
             </a>
-            <a href="notificacoes.html">    
+            <a href="../pages/Notificacao.html">    
                 <img src="../components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
             </a>
-            <a href="Selecao_Conta.html">
+            <a href="../pages/Selecao_Conta.html">
                 <img src="../components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
             </a>
         </div>
@@ -41,5 +41,23 @@
     <button id="addPagamento">Adicionar outras formas de pagamento</button>
     <button id="emailRecibo">Email para o envio do recibo</button>
     </div>
+
+    <script>
+// ------------------------------
+// PEGA INFORMAÇÕES DO LOCAL STORAGE
+// ------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const token = localStorage.getItem("Token");
+// ------------------------------
+// VERIFICA SE ESTA LOGADO
+if (!token) {
+    alert("Você precisa estar logado para acessar esta página.");
+    window.location.href = "../pages/login.html";
+    return;
+  }
+});
+
+
+    </script>
 </body>
 </html>

@@ -138,3 +138,8 @@ textarea#tokenField {
   display: flex;             /* permite justificar conteúdo */
   justify-content: flex-end; /* empurra o botão para a direita */
 }
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+}

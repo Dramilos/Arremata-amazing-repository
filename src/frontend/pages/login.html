@@ -4,30 +4,67 @@
   <meta charset="UTF-8" />
   <title>Login - Arremata</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="../styles/login.css" />
 </head>
 <body>
+
+
+
+  
   <main class="container">
     <section class="card">
       <h1>Login</h1>
 
-      <!--
-        Formulário simples: e-mail e senha.
-        Não há backend; o objetivo é simular o fluxo JWT.
-      -->
-      <form id="login-form" autocomplete="off" novalidate>
-        <label for="email">E-mail</label>
-        <input id="email" name="email" type="email" required />
+      <form id="login-form">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required/>
+        <p id = "mensagemEmail" class="error-message" ></p>
 
         <label for="senha">Senha</label>
         <input id="senha" name="senha" type="password" required />
 
         <button type="submit">Entrar</button>
 
-        <!-- Área para mostrar mensagens (ex.: campos vazios) -->
         <p id="msg" class="msg" aria-live="polite"></p>
       </form>
     </section>
   </main>
+
+  <script>
+
+ // ------------------------------
+  // EMAIL – VALIDAÇÃO E MENSAGEM DE ERRO
+  // ------------------------------
+     // Efeio blur no campo de email
+  const inputEmail = document.getElementById("email");
+const msgEmail = document.getElementById("mensagemEmail");
+
+// Função para validar email e exibir mensagem
+function validarEmailDinamico() {
+  const email = inputEmail.value.trim();
+  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (email === "") {
+    msgEmail.textContent = "O e-mail é obrigatório.";
+    msgEmail.style.color = "red";
+    msgEmail.style.display = "block";   // mostrar
+  } else if (!regexEmail.test(email)) {
+    msgEmail.textContent = "Por favor, insira um e-mail válido.";
+    msgEmail.style.color = "red";
+    msgEmail.style.display = "block";   // mostrar
+  } else {
+    msgEmail.textContent = "E-mail válido.";
+    msgEmail.style.color = "green";
+    msgEmail.style.display = "block";   // mostrar como mensagem de sucesso
+    
+  }
+}
+
+
+
+
+  </script>
+
 </body>
 </html>

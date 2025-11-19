@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Arremata</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles/login.css" />
+</head>
+<body>
+
+  <header class="header">
+      <a href="../index.html">
+          <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
+      </a>            
+      <nav class="nav">
+          <a href="./servicos.html">Realize serviços</a>
+          <a href="./Solicitacao_Servico.html">Solicite um serviço</a>
+      </nav>
+      <div class="header-icons">
+          <a href="../pages/Carteira.html">
+              <img src="../components/Imagens/Carteira.png" alt="Menu" class="icon-img-branca" />
+          </a>
+          <a href="../pages/Notificacao.html">    
+              <img src="../components/Imagens/Notificacao.png" alt="Notificações" class="icon-img-branca" />
+          </a>
+          <a href="../pages/Selecao_Conta.html">
+              <img src="../components/Imagens/Perfil_foto.png" alt="Perfil" class="icon-img" />
+          </a>
+      </div>
+  </header>
+
+
+  
+  <main class="container">
+    <section class="card">
+      <h1>Login</h1>
+
+      <form id="login-form">
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Email ou RG" required/>
+
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" required />
+
+        <button type="submit">Entrar</button>
+
+        <div id="msg-cadastro" class="msg-cadastro">
+          <p>Não tem cadastro? <a href="../pages/Cadastro.html" class="register-link">Crie sua conta</a></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

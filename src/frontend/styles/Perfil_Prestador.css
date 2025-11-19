@@ -125,21 +125,44 @@ body {
   object-fit: cover;
 }
 
+.profile-img:hover {
+  cursor: pointer;
+}
+
 .edit-btn {
   margin-top: 10px;
   border: none;
   background: #f2a500;
   color: white;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  min-width: 35px;
+  min-height: 35px;
   cursor: pointer;
   font-size: 1.1rem;
   transition: 0.3s;
 }
 
 .edit-btn:hover {
-  background: #e19600;
+  padding-bottom: 0.3rem;
+  background-color: #f7d46e;
+}
+
+.log-out {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-top: 10px;
+  background-color: #d4d3d0;
+  border-radius: 10px;
+  text-align: center;
+
+  transition: padding 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.log-out:hover {
+  padding: 0.7rem;
+  color: red;
+  background-color: #dddddc;
 }
 
 .profile-right {
@@ -221,6 +244,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

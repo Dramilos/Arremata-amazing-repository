@@ -12,7 +12,7 @@ html, body {
 body {
   margin: 0; /* remove margem padrão do navegador */
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* fonte segura e moderna */
-  background: #ffe69a; /* fundo escuro para bom contraste */
+  background: #fff9f3; /* fundo escuro para bom contraste */
   color: #251109;      /* texto claro para legibilidade */
   line-height: 1.5;    /* altura de linha confortável */
 }
@@ -97,6 +97,13 @@ body {
     height: 70px;
 }
 
+/* Logo */
+.logo-extra {
+    width: 220px;
+    margin: 0 auto 20px auto;  /* Centraliza horizontalmente */
+    display: block;             /* Garante que margin auto funcione */
+}
+
 
 /* Container central: usa grid para centralizar vertical/horizontal */
 .container {
@@ -110,8 +117,8 @@ body {
 .card {
   width: 100%;                 /* responsivo, ocupa a largura disponível */
   max-width: 400px;            /* largura máxima confortável para leitura */
-  background: #fff9f3;         /* bloco um pouco mais claro que o fundo */
-  border: 2px solid #ffdc1a;   /* borda sutil para separar do fundo */
+  background: #ffffff;         /* bloco um pouco mais claro que o fundo */
+  border: 2px solid #2c180f;   /* borda sutil para separar do fundo */
   border-radius: 16px;         /* cantos arredondados suaves */
   padding: 1.5rem;             /* espaçamento interno */
   box-shadow: 0 10px 30px rgba(0,0,0,0.35); /* profundidade */
@@ -204,14 +211,9 @@ textarea#tokenField {
   flex-wrap: wrap;    /* quebra para a linha de baixo em telas estreitas */
 }
 
-/* Área do botão de logout, alinhado à direita */
-.logout {
-  margin-top: 1.2rem;        /* espaço do conteúdo acima */
-  display: flex;             /* permite justificar conteúdo */
-  justify-content: flex-end; /* empurra o botão para a direita */
-}
-.error-message {
-  color: red;
-  font-size: 12px;
-  display: none;
+.msg-cadastro {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #382114;
+    text-align: center;
 }

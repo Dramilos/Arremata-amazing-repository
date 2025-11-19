@@ -5,7 +5,7 @@ body {
     display: grid;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
+    background: #f9f6f2;
     color: #23160f;
 }
 
@@ -124,18 +124,20 @@ body {
 .leia-mais {
     margin-top: 0;
 }
-.leia-mais-banner {
+
+.banner {
     background: linear-gradient(90deg, #f9c22e 60%, #ffdb7c 100%);
     text-align: center;
     padding: 18px 0;
 }
-.leia-mais-banner h2 {
+.banner h2 {
     font-family: 'Russo One', Arial, sans-serif;
     font-size: 2.2rem;
     color: #23160f;
     margin: 0;
     letter-spacing: 2px;
 }
+
 .leia-mais-content {
     display: flex;
     flex-direction: row;
@@ -155,6 +157,26 @@ body {
     max-width: 180px;
     height: auto;
     align-self: flex-end;
+}
+
+.container {
+    background-color:#f8bd1b;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 2.2rem;
+    color:#fff;
+    min-width: 20rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 3rem;
 }
 
 .footer {

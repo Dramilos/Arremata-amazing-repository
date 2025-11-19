@@ -1,40 +1,140 @@
-/* Import Google Fonts for bold headings */
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+/* Reset mínimo para consistência do box model */
+* {
+  box-sizing: border-box; /* inclui padding/border no cálculo de width/height */
+}
 
+/* Garante que o body ocupe a altura da viewport para centralizar conteúdo */
+html, body {
+  height: 100%;
+}
+
+/* Estilo global da página */
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
-    color: #23160f;
+  margin: 0; /* remove margem padrão do navegador */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* fonte segura e moderna */
+  background: #fcfaf4; /* fundo escuro para bom contraste */
+  color: #251109;      /* texto claro para legibilidade */
+  line-height: 1.5;    /* altura de linha confortável */
 }
 
-.header {
-    background: #2c180f;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 0 32px;
-    height: 56px;
-    justify-content: space-between;
+/* Container central: usa grid para centralizar vertical/horizontal */
+.container {
+  min-height: 100%;    /* ocupa toda a altura disponível */
+  display: grid;       /* grid simples permite place-items */
+  place-items: center; /* centraliza conteúdo nos dois eixos */
+  padding: 2rem;       /* respiro nas bordas em telas pequenas */
 }
 
+/* Cartão visual que envolve o conteúdo principal */
+.card {
+  width: 100%;                 /* responsivo, ocupa a largura disponível */
+  max-width: 400px;            /* largura máxima confortável para leitura */
+  background: #fff9f3;         /* bloco um pouco mais claro que o fundo */
+  border: 2px solid #ffdc1a;   /* borda sutil para separar do fundo */
+  border-radius: 16px;         /* cantos arredondados suaves */
+  padding: 1.5rem;             /* espaçamento interno */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35); /* profundidade */
+}
 
-.logo {
-    font-family: 'Russo One', Arial, sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-    margin-right: 24px;
+/* Títulos com espaçamento consistente */
+h1, h2, h3 {
+  margin: 0 0 0.5rem; /* remove margem superior e mantém um espaçamento inferior */
 }
-.icon-img {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 8px;
-    background: #fff;
-    border: 2px solid #2c180f;
-    transition: box-shadow 0.2s;
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}            /* título principal */
+
+/* Formulários empilhados, com espaçamento entre controles */
+form {
+  display: grid;        /* organização vertical simples */
+  gap: 0.6rem;          /* espaço entre labels/inputs/botões */
+  margin-top: 1rem;     /* separação do título/descrição acima */
 }
-.icon-img:hover {
-    box-shadow: 0 0 0 2px #f9c22e;
+
+/* Labels dos inputs */
+label {
+  font-size: 0.95rem; /* ligeiramente menor que h3 */
+  color: #251109;     /* mais claro para boa leitura */
+}
+
+/* Campos de entrada e área de texto (token) com visual monoespacial */
+input, textarea {
+  width: 100%;                 /* ocupa a largura do grid */
+  padding: 0.75rem 0.9rem;     /* conforto no clique/toque */
+  background: #ffffff ;         /* fundo mais escuro para campos */
+  border: 1px solid #ffdc1a;   /* borda discreta */
+  color: #524841;              /* texto claro */
+  border-radius: 10px;         /* cantos suaves */
+  outline: none;               /* remove highlight padrão (vamos customizar no :focus) */
+}
+
+/* Destaque de foco para acessibilidade: borda e glow */
+input:focus, textarea:focus {
+  border-color: #4b74ff;                       /* cor principal no foco */
+  box-shadow: 0 0 0 3px rgba(75,116,255,0.25); /* anel de foco suave */
+}
+
+/* Área para mensagens (erros/avisos) logo abaixo do formulário */
+.msg {
+  min-height: 1.2rem;  /* reserva espaço mesmo sem mensagem para evitar “pulos” */
+  margin-top: 0.25rem; /* pequeno espaçamento do campo acima */
+  font-size: 0.95rem;  /* tamanho de texto padrão */
+  color: #a9b5d1;      /* cor neutra */
+}
+.msg.error { color: #ff9494; } /* erro em vermelho claro visível no tema escuro */
+
+/* Botões “primários” e links estilizados como botão */
+button, .link-btn {
+  display: inline-flex;              /* facilita alinhamento de ícones/texto */
+  align-items: center;               /* centraliza verticalmente */
+  justify-content: center;           /* centraliza horizontalmente */
+  gap: 0.4rem;                       /* espaço entre ícone e texto se houver */
+
+  background: #ff8e1a ;               /* cor de ação principal */
+  color: white;                       /* contraste com o fundo do botão */
+  border: none;                       /* sem borda padrão */
+  padding: 0.7rem 1rem;               /* área de clique confortável */
+  border-radius: 10px;                /* cantos arredondados */
+  cursor: pointer;                    /* cursor de botão */
+  text-decoration: none;              /* remove sublinhado nos links-botão */
+  font-weight: 600;                   /* peso para destacar ação */
+}
+
+/* Efeito hover sutil nos botões */
+button:hover, .link-btn:hover {
+  filter: brightness(1.05); /* clareia levemente ao passar o mouse */
+}
+
+/* Variante “perigosa” (logout) */
+button.danger {
+  background: #ff5a5a; /* vermelho para indicar ação destrutiva */
+}
+
+/* Caixa do token (textarea, botões utilitários e instruções) */
+.token-box {
+  margin-top: 1rem; /* separa do cabeçalho/título */
+}
+
+/* Textarea específico para exibir o token copiado do localStorage */
+textarea#tokenField {
+  margin-top: 0.5rem; /* separação do subtítulo acima */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; /* fonte mono */
+  resize: vertical;   /* permite o usuário aumentar/diminuir verticalmente */
+}
+
+/* Linha de ações: copiar token e abrir jwt.io lado a lado */
+.actions {
+  display: flex;      /* layout em linha */
+  gap: 0.6rem;        /* espaço entre botões */
+  margin-top: 0.6rem; /* separação do textarea */
+  flex-wrap: wrap;    /* quebra para a linha de baixo em telas estreitas */
+}
+
+/* Área do botão de logout, alinhado à direita */
+.logout {
+  margin-top: 1.2rem;        /* espaço do conteúdo acima */
+  display: flex;             /* permite justificar conteúdo */
+  justify-content: flex-end; /* empurra o botão para a direita */
 }

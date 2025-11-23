@@ -144,6 +144,8 @@ body {
     align-items: flex-start;
     background: #fff;
     padding: 32px 32px 32px 32px;
+    /* Adicionado um espaçamento maior para o texto não ficar colado */
+    gap: 40px; 
 }
 
 .button {
@@ -154,16 +156,29 @@ body {
 
 .leia-mais-text {
     flex: 2;
-    font-size: 1.2rem;
-    color: #23160f;
-    line-height: 1.7;
-    margin-right: 24px;
+    font-size: 1.15rem; /* Levemente menor para melhor leitura em blocos */
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para fluidez */
+    color: #333333; /* Cor mais suave que o preto puro */
+    margin-right: 0; /* Remove a margem desnecessária, usando gap no container */
+    padding: 24px; /* Adiciona padding interno para simular um card */
+    background-color: #fcfcfc; /* Fundo muito leve para contraste */
+    border-left: 5px solid #f79d16; /* Borda laranja/âmbar para destaque institucional */
+    border-radius: 4px; /* Borda levemente arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra suave para efeito 3D */
 }
+
+.leia-mais-text strong {
+    color: #2c180f; /* Cor escura do header para forte contraste */
+    font-weight: bold;
+}
+
 .leia-mais-img {
     flex: 1;
-    max-width: 180px;
+    max-width: 220px; /* Aumenta o tamanho da imagem para melhor impacto visual */
     height: auto;
-    align-self: flex-end;
+    align-self: flex-start; /* Alinha a imagem com o topo do texto */
+    border-radius: 8px; /* Arredonda as bordas da imagem */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .botoes {
@@ -249,31 +264,45 @@ body {
 }
 
 /* Responsive adjustments */
+
 @media (max-width: 900px) {
+
     .hero {
         flex-direction: column;
     }
+
     .hero-img, .hero-info {
         width: 100%;
     }
+
     .leia-mais-content {
         flex-direction: column;
+        gap: 24px;
     }
+
     .leia-mais-img {
-        margin: 24px 0 0 0;
+        max-width: 80%; /* Garante que a imagem se ajuste bem */
         align-self: center;
+        margin: 0;
     }
+
+    .leia-mais-text {
+        padding: 20px;
+    }
+
     .footer-section {
         width: 100%;
         margin-left: 0;
         margin-bottom: 24px;
     }
+
     .footer {
         align-items: flex-start;
         padding-left: 24px;
         position: fixed-bottom;
         display: block;
     }
+
     .footer-copy {
         margin-left: 0;
     }

@@ -38,8 +38,6 @@ if (!token) {
     return;
   }
 
-
-
 // ------------------------------
 // EXIBE INFORMAÇÕES NA PÁGINA
   document.getElementById("Nome").textContent = nome || "";

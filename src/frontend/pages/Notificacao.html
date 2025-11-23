@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notificações</title>
-    <link rel="stylesheet" href="../styles/Notificação.css">
+    <link rel="stylesheet" href="../styles/Notificacao.css">
 </head>
     <header class="header">
-            <a href="index.html">
+            <a href="../index.html">
                 <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
             </a>            
         <nav class="nav">
-            <a href="#">Realize serviços</a>
-            <a href="#">Solicite um serviço</a>
+            <a href="../pages/servicos.html">Realize serviços</a>
+            <a href="../pages/Solicitacao_Servico.html">Solicite um serviço</a>
         </nav>
         <header class="header-icons">
             <a href="../pages/Carteira.html">
@@ -49,5 +49,23 @@
             </section>
         </section>
     </main>
+
+    <script>
+// ------------------------------
+// PEGA INFORMAÇÕES DO LOCAL STORAGE
+// ------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const token = localStorage.getItem("Token");
+// ------------------------------
+// VERIFICA SE ESTA LOGADO
+if (!token) {
+    alert("Você precisa estar logado para acessar esta página.");
+    window.location.href = "../pages/login.html";
+    return;
+  }
+});
+
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,209 @@
+/* BASE GERAL */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff9f3;
+    color: #23160f;
+}
+
+/* HEADER */
+.header {
+    background: #2c180f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 56px;
+    justify-content: space-between;
+}
+
+#img-arremata {
+    margin-right: 24px;
+    width: 200px;
+    height: 70px;
+}
+
+/* Links */
+.nav {
+    display: flex;
+    gap: 12px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+/* Ícones */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-img,
+.icon-img-branca {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    transition: box-shadow 0.2s;
+}
+
+.icon-img {
+    background: #fff;
+    border: 2px solid #2c180f;
+}
+
+.icon-img-branca {
+    background: #2c180f;
+    border: 2px solid #2c180f;
+}
+
+.icon-img:hover,
+.icon-img-branca:hover {
+    box-shadow: 0 0 0 2px #f9c22e;
+}
+
+/* CARD CENTRAL */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.login-container {
+    background: white;
+    width: 100%;
+    max-width: 360px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 220px;
+    max-width: 70%;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.login-container h2 {
+    margin: 8px 0 25px;
+    font-size: 1.25rem;
+    color: #382114;
+}
+
+/* Inputs */
+.input-box {
+    margin-bottom: 18px;
+    margin-right: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #2c180f;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Botão */
+.btn-login {
+    width: 50%;
+    padding: 12px 0;
+    background: white;
+    border: 2px solid #2c180f;
+    border-radius: 14px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-login:hover {
+    background: #ff7300;
+    border-color:#ff7300;
+    color:#fff9f3;
+}
+
+/* Separador */
+.divider {
+    width: 90%;
+    height: 2px;
+    background: #2c180f;
+    margin: 25px auto 15px;
+}
+
+/* Textos inferiores */
+.small-text {
+    margin-top: 5px;
+    color: #23160f;
+    font-size: 0.95rem;
+}
+
+.create-account {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #0077ff;
+}
+
+create-account:hover {
+    text-decoration: underline;
+}
+
+/* ============================ */
+/*         RESPONSIVIDADE        */
+/* ============================ */
+
+/* Ajusta header em telas menores */
+@media (max-width: 768px) {
+
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 12px;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #img-arremata {
+        width: 160px;
+        height: auto;
+        margin: 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-icons {
+        justify-content: center;
+    }
+}
+
+/* Layout perfeito para celular */
+@media (max-width: 480px) {
+
+    .btn-login {
+        width: 100%;
+    }
+
+    .logo {
+        max-width: 80%;
+    }
+
+    .nav a {
+        font-size: .9rem;
+    }
+}

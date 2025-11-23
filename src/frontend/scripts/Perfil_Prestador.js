@@ -22,31 +22,39 @@ uploadImg.addEventListener('change', (event) => {
 });
 
 
-// ------------------------------
+/// ------------------------------
 // PEGA INFORMAÇÕES DO LOCAL STORAGE
 // ------------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  const nome = localStorage.getItem("Usuario");
-  const rg = localStorage.getItem("RG");
-  const telefone = localStorage.getItem("Telefone");
-  const token = localStorage.getItem("Token");
-// ------------------------------
-// VERIFICA SE ESTA LOGADO
-if (!token) {
-    alert("Você precisa estar logado para acessar esta página.");
-    window.location.href = "../pages/login.html";
-    return;
-  }
+    const nome = localStorage.getItem("Usuario");
+    const rg = localStorage.getItem("RG");
+    const telefone = localStorage.getItem("Telefone");
+    const token = localStorage.getItem("Token");
+    // ------------------------------
+    // VERIFICA SE ESTA LOGADO
+    if (!token) {
+        alert("Você precisa estar logado para acessar esta página.");
+        window.location.href = "../pages/login.html";
+        return;
+    }
 
+    // ------------------------------
+    // EXIBE INFORMAÇÕES NA PÁGINA
 
+    // Exibe Nome, RG, Telefone no topo do Perfil
+    document.getElementById("Nome").textContent = nome || "";
+    document.getElementById("RG").textContent = rg || "";
+    document.getElementById("Telefone").textContent = telefone || "";
 
-// ------------------------------
-// EXIBE INFORMAÇÕES NA PÁGINA
-  document.getElementById("Nome").textContent = nome || "";
-  document.getElementById("RG").textContent = rg || "";
-  document.getElementById("Telefone").textContent = telefone || "";
+    // ------------------------------
+    // NOVO: Exibe o nome do usuário nas áreas de Avaliações/Serviços
+    // Nota: Isso apenas substitui o nome de exemplo ('Tadeu') pelo nome do usuário logado.
+    if (nome) {
+        document.getElementById("nomeAvaliador1").textContent = nome;
+        document.getElementById("nomeAvaliador2").textContent = nome;
+        document.getElementById("nomeServicoAndamento").textContent = nome;
+    }
 });
-
 // ------------------------------
 // LOGOUT E LIMPA LOCALSTORAGE
 // ------------------------------

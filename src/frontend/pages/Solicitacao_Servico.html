@@ -10,8 +10,8 @@
                 <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
             </a>            
         <nav class="nav">
-            <a href="../servicos.html">Realize serviços</a>
-            <a href="../Solicitacao_Servico.html">Solicite um serviço</a>
+            <a href="../pages/servicos.html">Realize serviços</a>
+            <a href="../pages/Solicitacao_Servico.html">Solicite um serviço</a>
         </nav>
         <div class="header-icons">
             <a href="../pages/Carteira.html">
@@ -48,21 +48,24 @@
       </div>
 
       <div class="coluna-direita">
-        <div class="upload-container">
-          <label>ADICIONAR FOTO</label>
-          <div class="upload-box" id="foto-box">
-            <input type="file" accept="image/*">
-            <span>ADD MEDIA</span>
-          </div>
-        </div>
+      <div class="upload-container">
+      <label>ADICIONAR FOTO</label>
+      <div class="upload-box" id="foto-box">
+      <input type="file" id="uploadFotoInput" accept="image/*"> 
+      <img id="fotoPreview" class="media-preview" alt="Prévia da Foto" style="display: none;">
+      <span id="fotoPlaceholder">ADD MEDIA</span>
+      </div>
+      </div>
 
-        <div class="upload-container">
-          <label>ADICIONAR VÍDEO</label>
-          <div class="upload-box" id="video-box">
-            <input type="file" accept="video/*">
-            <span>ADD MEDIA</span>
-          </div>
-        </div>
+      <div class="upload-container">
+      <label>ADICIONAR VÍDEO/FOTO</label>
+      <div class="upload-box" id="video-box">
+      <input type="file" id="uploadVideoFotoInput" accept="video/*, image/*"> 
+      <video id="videoPreview" class="media-preview" style="display: none;" controls></video>
+      <img id="imagemPreview" class="media-preview" alt="Prévia da Mídia" style="display: none;">
+      <span id="videoPlaceholder">ADD MEDIA</span>
+      </div>
+      </div>
 
         <label>TAGS</label>
         <div class="tags-container">

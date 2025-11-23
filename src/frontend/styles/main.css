@@ -5,7 +5,7 @@ body {
     display: grid;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
+    background: #f9f6f2;
     color: #23160f;
 }
 
@@ -109,8 +109,7 @@ body {
     min-height: 260px;
 }
 .hero-info {
-    width: 60%;
-    padding: 0 32px 0 32px;
+    padding: 0px 32px 0 32px;
     background: #f9f6f2;
     display: flex;
     flex-direction: column;
@@ -118,7 +117,7 @@ body {
 }
 .hero-info h1 {
     font-family: 'Russo One', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #23160f;
     margin-bottom: 16px;
 }
@@ -131,37 +130,95 @@ body {
 .leia-mais {
     margin-top: 0;
 }
-.leia-mais-banner {
-    background: linear-gradient(90deg, #f9c22e 60%, #ffdb7c 100%);
+
+.banner {
+    background: linear-gradient(90deg, #f9c22e 60%, #ffe395 100%);
     text-align: center;
-    padding: 18px 0;
+    padding: 24px;
 }
-.leia-mais-banner h2 {
+
+.banner h2 {
     font-family: 'Russo One', Arial, sans-serif;
     font-size: 2.2rem;
     color: #23160f;
     margin: 0;
     letter-spacing: 2px;
 }
+
 .leia-mais-content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     background: #fff;
     padding: 32px 32px 32px 32px;
+    /* Adicionado um espaçamento maior para o texto não ficar colado */
+    gap: 40px; 
 }
+
+.button {
+    border: none;
+    color:#f9f6f2;
+    border-radius: 10px;
+}
+
 .leia-mais-text {
     flex: 2;
-    font-size: 1.2rem;
-    color: #23160f;
-    line-height: 1.7;
-    margin-right: 24px;
+    font-size: 1.15rem; /* Levemente menor para melhor leitura em blocos */
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para fluidez */
+    color: #333333; /* Cor mais suave que o preto puro */
+    margin-right: 0; /* Remove a margem desnecessária, usando gap no container */
+    padding: 24px; /* Adiciona padding interno para simular um card */
+    background-color: #fcfcfc; /* Fundo muito leve para contraste */
+    border-left: 5px solid #f79d16; /* Borda laranja/âmbar para destaque institucional */
+    border-radius: 4px; /* Borda levemente arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra suave para efeito 3D */
 }
+
+.leia-mais-text strong {
+    color: #2c180f; /* Cor escura do header para forte contraste */
+    font-weight: bold;
+}
+
 .leia-mais-img {
     flex: 1;
-    max-width: 180px;
+    max-width: 220px; /* Aumenta o tamanho da imagem para melhor impacto visual */
     height: auto;
-    align-self: flex-end;
+    align-self: flex-start; /* Alinha a imagem com o topo do texto */
+    border-radius: 8px; /* Arredonda as bordas da imagem */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.botao {
+    border: none;
+    border-radius: 10px;
+    background-color: #f9c22e;
+    padding: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color:#f9f6f2;
+
+    transition: padding 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao:hover {
+    padding: 3.2rem;
+    background-color: #f79d16;
+}
+
+.botao:nth-child(2):hover {
+    padding: 3.2rem;
+    background-color: #f05c2f;
 }
 
 .footer {
@@ -214,31 +271,45 @@ body {
 }
 
 /* Responsive adjustments */
+
 @media (max-width: 900px) {
+
     .hero {
         flex-direction: column;
     }
+
     .hero-img, .hero-info {
         width: 100%;
     }
+
     .leia-mais-content {
         flex-direction: column;
+        gap: 24px;
     }
+
     .leia-mais-img {
-        margin: 24px 0 0 0;
+        max-width: 80%; /* Garante que a imagem se ajuste bem */
         align-self: center;
+        margin: 0;
     }
+
+    .leia-mais-text {
+        padding: 20px;
+    }
+
     .footer-section {
         width: 100%;
         margin-left: 0;
         margin-bottom: 24px;
     }
+
     .footer {
         align-items: flex-start;
         padding-left: 24px;
         position: fixed-bottom;
         display: block;
     }
+
     .footer-copy {
         margin-left: 0;
     }

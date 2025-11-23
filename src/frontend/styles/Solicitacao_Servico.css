@@ -1,18 +1,18 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #faf6ea;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background: #faf6ea;
+    margin: 0;
+    padding: 0;
 }
 /* Ajustes do header de cima */
 .header {
-  background: #2d180c;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2px 1.5rem 2px 1.5rem;
-  /* CIMA DIREITA BAIXO ESQUERDA */
+    background: #2d180c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 1.5rem 2px 1.5rem;
+    /* CIMA DIREITA BAIXO ESQUERDA */
 }
 
 .nav a {
@@ -46,18 +46,18 @@ body {
 }
 
 .logo img {
-  height: 80px; /* Defina uma altura fixa. 80px é um bom valor, similar à imagem de perfil. */
-  width: auto; /* Mantém a proporção da imagem automaticamente. */
-  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do top-header */
+    height: 80px; /* Defina uma altura fixa. 80px é um bom valor, similar à imagem de perfil. */
+    width: auto; /* Mantém a proporção da imagem automaticamente. */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do top-header */
 }
 
 .profile-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 4px solid #ffcc3a;
-  background: #fff;
-  object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #ffcc3a;
+    background: #fff;
+    object-fit: cover;
 }
 
 .icon-img:hover {
@@ -87,160 +87,178 @@ body {
 
 /* ===== CONTEÚDO PRINCIPAL ===== */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 40px 0;
 }
 
 /* ===== FORMULÁRIO ===== */
 .formulario {
-  background-color: #ffffff;
-  display: flex;
-  gap: 50px;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  max-width: 1080px;
-  width: 90%;
+    background-color: #ffffff;
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    max-width: 1080px;
+    width: 90%;
 }
 
 /* ===== CAMPOS E RÓTULOS ===== */
 label {
-  font-weight: bold;
-  display: block;
-  margin-top: 10px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
 input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 textarea {
-  resize: none;
-  height: 80px;
+    resize: none;
+    height: 80px;
 }
 
 .coluna-esquerda, .coluna-direita {
-  flex: 1;
+    flex: 1;
+    display: flex; /* Para forçar os itens internos a se empilharem e corrigirem o layout */
+    flex-direction: column; /* Para forçar os itens a se empilharem */
 }
 
 /* ===== UPLOAD ===== */
 .upload-container {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 .upload-box {
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(white, #e3e3e3);
-  border: 2px dashed #bbb;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  cursor: pointer;
-  margin-top: 5px;
-  position: relative;
+    width: 100%;
+    height: 220px; /* ALTERADO: Altura aumentada para exibição maior das mídias */
+    background: linear-gradient(white, #e3e3e3);
+    border: 2px dashed #bbb;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    cursor: pointer;
+    margin-top: 5px;
+    position: relative;
 }
 
 .upload-box input {
-  opacity: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
 /* ===== TAGS DINÂMICAS ===== */
 .tags-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
 #tag-input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 #tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .tag {
-  background-color: #f1f1f1;
-  border-radius: 20px;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
 }
 
 .tag span {
-  margin-right: 6px;
+    margin-right: 6px;
 }
 
 .tag button {
-  background: none;
-  border: none;
-  color: #666;
-  font-weight: bold;
-  cursor: pointer;
+    background: none;
+    border: none;
+    color: #666;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .tag button:hover {
-  color: red;
+    color: red;
 }
 
 /* ===== LANCE INICIAL ===== */
 .lance-box {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .lance-box span {
-  margin-right: 5px;
-  font-weight: bold;
+    margin-right: 5px;
+    font-weight: bold;
 }
 
 /* ===== BOTÃO DE PUBLICAR ===== */
 .btn-publicar {
-  background: linear-gradient(180deg, #ffcc00, #ff9900);
-  border: 2px solid #000;
-  border-radius: 8px;
-  font-weight: bold;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 50px;
-  align-self: flex-end;
-  transition: 0.2s;
+    background: linear-gradient(180deg, #ffcc00, #ff9900);
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 50px;
+    align-self: flex-end;
+    transition: 0.2s;
 }
 
 .btn-publicar:hover {
-  background: linear-gradient(180deg, #ffe066, #ffaa00);
+    background: linear-gradient(180deg, #ffe066, #ffaa00);
 }
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 900px) {
-  .formulario {
-    flex-direction: column;
-    gap: 30px;
-    padding: 25px;
-  }
+    .formulario {
+        flex-direction: column;
+        gap: 30px;
+        padding: 25px;
+    }
 
-  .btn-publicar {
-    margin: 30px auto 0 auto;
-  }
+    .btn-publicar {
+        margin: 30px auto 0 auto;
+    }
+}
+
+/* Estilo para a imagem/vídeo de pré-visualização */
+.media-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a mídia preencha a caixa sem distorcer */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
+/* Garante que o texto ADD MEDIA desapareça ao carregar a foto */
+#foto-box.has-media span {
+    display: none;
 }

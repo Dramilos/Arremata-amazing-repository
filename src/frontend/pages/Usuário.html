@@ -11,8 +11,8 @@
           <img src="../components/Imagens/Logo_Arremata.png" alt = "Logo Arremata" id = "img-arremata">
       </a>            
       <nav class="nav">
-          <a href="../servicos.html">Realize serviços</a>
-          <a href="../Solicitacao_Servico.html">Solicite um serviço</a>
+          <a href="../pages/servicos.html">Realize serviços</a>
+          <a href="../pages/Solicitacao_Servico.html">Solicite um serviço</a>
       </nav>
       <div class="header-icons">
           <a href="../pages/Carteira.html">
@@ -33,7 +33,7 @@
     <section class="profile-info card">
       <div class="profile-left">
         <!-- IMAGEM DE PERFIL -->
-        <img id="profileImg" src="../components/Imagens/Perfil_foto.png" alt="Foto de perfil" class="profile-img">
+        <img id="profileImg" src="../components/Imagens/avaliador_3.png" alt="Foto de perfil" class="profile-img">
 
         <!-- INPUT DE ARQUIVO OCULTO -->
         <input type="file" id="uploadImg" accept="image/*" style="display:none;">
@@ -69,43 +69,42 @@
 
         <div class="input-group">
           <label>Breve descrição sobre você:</label>
-          <textarea class="editable" >Gosto de brincar e andar de bicicleta</textarea>
+          <textarea class="editable" >Tenho 25 Anos. Normalmente necessito de serviços na área da Elétrica. Porém, também realizo serviços mecânicos.
+          </textarea>
         </div>
       </div>
     </section>
 
-    <!-- Avaliações -->
     <section class="reviews card">
       <h3>Análises passadas</h3>
 
       <div class="review">
         <div class="client">
-          <img src="../components/Imagens/Perfil_foto.png" alt="">
-          <span>Tadeu F.</span>
+          <img src="../components/Imagens/avaliador_3.png" alt="">
+          <span id="nomeAvaliador1">Tadeu F.</span>
           <span>Para: Joaquim dos Santos</span>
         </div>
         <div class="stars" data-rating="5">★★★★★</div>
-        <p>Muito profissional e rápido! Lindo</p>
+        <p>Muito profissional e rápido!</p>
       </div>
 
       <div class="review">
         <div class="client">
-          <img src="../components/Imagens/Perfil_foto.png" alt="">
-          <span>Tadeu F.</span>
+          <img src="../components/Imagens/avaliador_3.png" alt="">
+          <span id="nomeAvaliador2">Tadeu F.</span>
           <span>Para: Maral Amaral</span>
         </div>
         <div class="stars" data-rating="2">★★</div>
-        <p>Quebrou minha pia</p>
+        <p>Serviço amador e de péssima qualidade. Arranho o chão de casa!</p>
       </div>
     </section>
 
-        <!-- SERVIÇOS EM ANDAMENTO -->
-    <section class="portfolio card">
+      <section class="portfolio card">
       <h3>Serviços em andamento</h3>
       <div class="portfolio-item">
         <div class="thumb">🎥</div>
         <div class="details">
-          <p><strong>Tadeu Fagundes</strong></p>
+          <p><strong><span id="nomeServicoAndamento">Tadeu Fagundes</span></strong></p>
           <p>Instalação elétrica residencial em AP 102</p>
         </div>
       </div>

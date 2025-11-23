@@ -1,7 +1,7 @@
 # Arremata-amazing-repository
 ## O repositório do GitHub para o aplicativo "Arremata"
 
-Projeto Arremata:
+Projeto Arremata: por trabalhadores, para trabalhadores.
 
 ## Descrição
 Aplicativo para a procura e realização de serviços de forma remota, focado em pessoas que buscam profissionais para realizarem serviços domésticos, ou para trabalhadores em busca de oportunidades de emprego.

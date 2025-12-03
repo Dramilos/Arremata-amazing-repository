@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("Telefone").textContent = telefone || "";
 
     // ------------------------------
-    // NOVO: Exibe o nome do usuário nas áreas de Avaliações/Serviços
+    // Exibe o nome do usuário nas áreas de Avaliações/Serviços
     // Nota: Isso apenas substitui o nome de exemplo ('Tadeu') pelo nome do usuário logado.
     if (nome) {
         document.getElementById("nomeAvaliador1").textContent = nome;

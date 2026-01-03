@@ -1,9 +1,10 @@
 body {
   font-family: Arial, sans-serif;
-  background: #faf6ea;
+  background: #fff9f3;
   margin: 0;
   padding: 0;
 }
+
 /* Ajustes do header de cima */
 .header {
   background: #2d180c;
@@ -85,12 +86,16 @@ body {
 }
 
 form#Formulario {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* fonte segura e moderna */
+  color: #251109;      /* texto claro para legibilidade */
+  line-height: 1.5;    /* altura de linha confortável */
+  border: 2px solid #251109;
   background: #ffffff;
-  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35); /* profundidade */
+  border-radius: 16px;
   max-width: 600px;
   margin: 32px auto 0 auto;
   padding: 32px 32px 24px 32px;
-  border-radius: 5;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -115,8 +120,8 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
   width: 100%;
   padding: 12px;
   margin-bottom: 0;
-  border-radius: 8px;
-  border: 2px solid #2d180c;
+  border-radius: 10px;
+  border: 1px solid #ffdc1a;
   background: #fff;
   box-sizing: border-box;
   font-size: 1.2rem;
@@ -164,21 +169,25 @@ input[type=checkbox] {
   margin-top: 32px;
 }
 
-.btn:hover {
-  color: #ffcc3a;
+button:hover, .link-btn:hover {
+  filter: brightness(1.05); /* clareia levemente ao passar o mouse */
 }
 
-.btn {
-  background: #fff;
-  color: #2d180c;
-  border: 2px solid #2d180c;
-  border-radius: 18px;
-  font-size: 1.2rem;
-  padding: 10px 38px;
-  cursor: pointer;
-  font-weight: normal;
-  transition: background 0.2s, color 0.2s;
+button, .link-btn {
+  display: inline-flex;              /* facilita alinhamento de ícones/texto */
+  color: white;
+  align-items: center;               /* centraliza verticalmente */
+  justify-content: center;           /* centraliza horizontalmente */
+  gap: 0.4rem;                       /* espaço entre ícone e texto se houver */
+  background: #ff8e1a ;               /* cor de ação principal */                       /* contraste com o fundo do botão */
+  border: none;                       /* sem borda padrão */
+  padding: 1rem 5rem;               /* área de clique confortável */
+  border-radius: 10px;                /* cantos arredondados */
+  cursor: pointer;                    /* cursor de botão */
+  text-decoration: none;              /* remove sublinhado nos links-botão */
+  font-weight: 600;                   /* peso para destacar ação */
 }
+
 
 .btn:disabled {
   opacity: 0.5;
@@ -192,7 +201,7 @@ input[type=checkbox] {
 
 a {
   text-decoration: none;
-  color: #2c180c;
+  color: #ffffff;
 }
 
 .error-message {
